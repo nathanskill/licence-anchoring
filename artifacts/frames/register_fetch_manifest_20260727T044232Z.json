@@ -1,0 +1,13 @@
+[
+  {
+    "key": "seychelles_securities_dealers",
+    "url": "https://fsaseychelles.sc/regulated-entities/capital-markets",
+    "jurisdiction": "Seychelles",
+    "regulator": "Seychelles FSA",
+    "status": "ok",
+    "bytes": 1040934,
+    "sha256": "52d319f3653dd58abcd23ac6d9509f06d7c5780765063cb88838dbdf76b468b4",
+    "file": "seychelles_securities_dealers_20260727T044232Z.html",
+    "fetched_utc": "20260727T044232Z"
+  }
+]
