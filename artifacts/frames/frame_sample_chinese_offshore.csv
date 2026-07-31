@@ -1,4 +1,4 @@
-domain,n_zho_pages,n_pages_any_lang,has_chinese_presence,n_register_entities,register_entities,jurisdiction,sample_zho_url
+domain,n_zho_captures_capped,n_captures_capped,has_chinese_presence,n_register_entities,register_entities,jurisdiction,sample_zho_url
 10tradefx.com,0,0,0,1,Evalanch Ltd,Seychelles,
 4t.com,0,19,0,1,4T Limited,Seychelles,
 4xc.com,0,170,0,1,4XC (Seychelles) Ltd,Seychelles,
@@ -39,7 +39,7 @@ eliprime.com,0,-1,0,1,Eliprime Finance Limited,Seychelles,
 errante.com,32,1000,1,1,Errante Securities (Seychelles) Limited,Seychelles,https://errante.com/zh-hans/
 eto.group,0,4,0,1,ETO MARKETS LIMITED,Seychelles,
 etoro.com,9,1000,1,1,eToro (Seychelles) Limited,Seychelles,https://www.etoro.com/ar/people/betterleaf
-eurotrader.com;,0,0,0,1,Eurotrade RGB (Seychelles) Ltd,Seychelles,
+eurotrader.com,0,260,0,1,Eurotrade RGB (Seychelles) Ltd,Seychelles,
 excent.capital,0,69,0,1,Excent Capital Ltd,Seychelles,
 exclusivemarkets.com,0,0,0,1,Exclusive Markets Ltd,Seychelles,
 exeliumglobal.com,0,0,0,1,EXELIUM GLOBAL LTD,Seychelles,

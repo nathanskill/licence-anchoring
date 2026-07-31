@@ -39,7 +39,9 @@ F2 = os.path.join(ART, "frame_f2_offshore_registers.csv")
 PROBE_OUT = os.path.join(ART, "cc_chinese_probe.jsonl")
 SAMPLE_OUT = os.path.join(ART, "frame_sample_chinese_offshore.csv")
 
-# Frozen at protocol freeze: the crawl queried for Chinese presence.
+# Crawl queried for Chinese presence. Pinned at the first probe run
+# (post-freeze): the frozen protocol names no crawl ID — see
+# protocol/amendments/amendment_1.md, which fixes this choice.
 CC_INDEX = "CC-MAIN-2026-25"
 CC_URL = "https://index.commoncrawl.org/%s-index" % CC_INDEX
 
@@ -48,22 +50,50 @@ UA = ("licence-anchoring-research/1.0 (academic measurement; "
 
 PAUSE = 1.1          # >= 1 req/s per Common Crawl FAQ
 TIMEOUT = 90
-MAX_RETRY = 3
-BACKOFF = 20.0
+MAX_RETRY = 5
+BACKOFF = 25.0
+
+# CDX query limits. The tallies returned are CAPTURE RECORDS capped at
+# these limits (no collapse=urlkey), NOT unique page counts — several
+# domains sit exactly at a cap. Only presence (n > 0) is used analytically.
+ZHO_CAP = 200
+ANY_CAP = 1000
 
 
 def domain_of(url):
+    """Extract one sanitized hostname from a single URL candidate."""
     u = re.sub(r"^https?://", "", (url or "").strip().lower())
     u = re.sub(r"^www\.", "", u)
-    return u.split("/")[0].split("?")[0]
+    d = u.split("/")[0].split("?")[0]
+    # Register website fields carry stray trailing punctuation (an archived
+    # snapshot lists "https://www.eurotrader.com;"); an invalid host
+    # guarantees a CDX 404 that would be misread as absence of captures.
+    return d.strip().strip(";,:").strip()
 
 
-def cc_query(domain, zho_only=True, limit=200):
+def domains_of(field):
+    """Split a register website field into sanitized hostnames.
+
+    Register fields may hold several URLs separated by ';' or ','; each
+    candidate is sanitized and yielded, invalid remainders dropped.
+    """
+    out = []
+    for part in re.split(r"[;,]", field or ""):
+        d = domain_of(part)
+        if d and "." in d and d not in out:
+            out.append(d)
+    return out
+
+
+def cc_query(domain, zho_only=True, limit=ZHO_CAP):
     """Query the CC index for a domain. Returns (n_records, sample_urls).
 
     `filter=~languages:^zho` selects pages whose PRIMARY language is Chinese.
     The languages field is regex-filterable server-side, so this costs one
     request per domain rather than a bulk download.
+
+    n_records counts CDX capture records up to `limit` (no collapse=urlkey):
+    it is a capped capture tally, not a page count.
     """
     params = {
         "url": domain,
@@ -96,7 +126,9 @@ def cc_query(domain, zho_only=True, limit=200):
         except urllib.error.HTTPError as e:
             if e.code == 404:
                 return 0, []            # no captures for this domain
-            if e.code in (429, 503):
+            if e.code in (429, 502, 503, 504):
+                if attempt == MAX_RETRY:
+                    return -1, [f"HTTP {e.code} after {MAX_RETRY} attempts"]
                 time.sleep(BACKOFF * attempt)
                 continue
             return -1, [f"HTTP {e.code}"]
@@ -109,8 +141,7 @@ def cc_query(domain, zho_only=True, limit=200):
 
 def cmd_probe():
     rows = list(csv.DictReader(open(F2, newline="")))
-    domains = sorted({domain_of(r["website"]) for r in rows if r["website"]})
-    domains = [d for d in domains if d and "." in d]
+    domains = sorted({d for r in rows for d in domains_of(r["website"])})
 
     done = set()
     if os.path.exists(PROBE_OUT):
@@ -126,11 +157,12 @@ def cmd_probe():
 
     with open(PROBE_OUT, "a") as out:
         for i, d in enumerate(todo, 1):
-            n_zho, sample = cc_query(d, zho_only=True)
+            n_zho, sample = cc_query(d, zho_only=True, limit=ZHO_CAP)
             time.sleep(PAUSE)
-            n_all, _ = cc_query(d, zho_only=False, limit=1000)
+            n_all, _ = cc_query(d, zho_only=False, limit=ANY_CAP)
             rec = {"domain": d, "crawl": CC_INDEX,
-                   "n_zho_pages": n_zho, "n_pages_any_lang": n_all,
+                   "n_zho_captures_capped": n_zho,
+                   "n_captures_capped": n_all,
                    "sample_zho_urls": sample}
             out.write(json.dumps(rec) + "\n")
             out.flush()
@@ -156,8 +188,7 @@ def cmd_summarise():
     f2 = list(csv.DictReader(open(F2, newline="")))
     by_domain = {}
     for r in f2:
-        d = domain_of(r["website"])
-        if d:
+        for d in domains_of(r["website"]):
             by_domain.setdefault(d, []).append(r)
 
     rows = []
@@ -165,9 +196,9 @@ def cmd_summarise():
         ents = by_domain.get(d, [])
         rows.append({
             "domain": d,
-            "n_zho_pages": p["n_zho_pages"],
-            "n_pages_any_lang": p["n_pages_any_lang"],
-            "has_chinese_presence": int(p["n_zho_pages"] > 0),
+            "n_zho_captures_capped": p["n_zho_captures_capped"],
+            "n_captures_capped": p["n_captures_capped"],
+            "has_chinese_presence": int(p["n_zho_captures_capped"] > 0),
             "n_register_entities": len(ents),
             "register_entities": " | ".join(
                 e["entity_name"] for e in ents)[:400],
@@ -182,16 +213,20 @@ def cmd_summarise():
 
     n = len(rows)
     zho = [r for r in rows if r["has_chinese_presence"]]
-    err = [r for r in rows if r["n_zho_pages"] < 0]
+    err = [r for r in rows if r["n_zho_captures_capped"] < 0]
     print(f"written: {SAMPLE_OUT}")
     print(f"domains probed:            {n}")
-    print(f"with Chinese-language pages: {len(zho)} "
+    print(f"with Chinese-language capture presence: {len(zho)} "
           f"({len(zho) / max(1, n - len(err)):.0%} of successfully probed)")
     print(f"probe errors:              {len(err)}")
-    print("\ntop by Chinese page count:")
-    for r in sorted(zho, key=lambda x: -x["n_zho_pages"])[:15]:
-        print(f"  {r['domain']:<32} {r['n_zho_pages']:>4} zho pages   "
-              f"{r['register_entities'][:52]}")
+    # Capture tallies are capped CDX record counts (limits {ZHO_CAP}/{ANY_CAP},
+    # no collapse=urlkey), so they cannot rank domains — only the presence
+    # indicator is meaningful. List presence domains alphabetically.
+    print(f"\ndomains with Chinese-language capture presence "
+          f"(capture tallies are capped at {ZHO_CAP} and are not page "
+          f"counts; order is alphabetical, not a ranking):")
+    for r in sorted(zho, key=lambda x: x["domain"]):
+        print(f"  {r['domain']:<32} {r['register_entities'][:56]}")
     return 0
 
 
