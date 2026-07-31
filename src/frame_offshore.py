@@ -17,6 +17,15 @@ entity name, address, contact and website but NO licence number. Frames built
 from it therefore support name-level matching only, and that limitation is
 recorded per-row in the `has_licence_number` column rather than hidden.
 
+Privacy minimization (protocol section 7, rule 4: no private individuals as
+units of analysis): the COMMITTED artifact contains only institutional
+categories (securities-dealer, securities-exchange, securities-facility,
+clearing-agency, investment-advisor) and carries no email column. The
+register's representative entries (named natural persons with no websites and
+no analytical role in this study) and all email addresses are written only to
+a local file under data/ (gitignored), and remain derivable byte-for-byte
+from the archived register HTML.
+
 Usage:
     python3 src/frame_offshore.py --fetch      # archive raw register pages
     python3 src/frame_offshore.py --parse      # parse archives into frame CSV
@@ -30,6 +39,7 @@ import re
 import time
 import urllib.request
 from datetime import datetime, timezone
+from html import unescape
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 RAW = os.path.join(ROOT, "data", "registers")
@@ -91,16 +101,17 @@ def cmd_fetch():
     print("manifest:", mpath)
 
 
-def strip_tags(html):
-    html = re.sub(r"(?is)<(script|style).*?</\1>", " ", html)
-    html = re.sub(r"(?s)<[^>]+>", "\n", html)
-    html = html.replace("&amp;", "&").replace("&nbsp;", " ")
-    html = html.replace("&#039;", "'").replace("&quot;", '"')
-    return html
+# Categories whose rows may appear in the committed artifact. Representative
+# categories list named natural persons; per protocol section 7 rule 4 they
+# stay local-only (see module docstring).
+INSTITUTIONAL_CATEGORIES = {
+    "securities-dealer", "securities-exchange", "securities-facility",
+    "clearing-agency", "investment-advisor",
+}
 
 
 def parse_seychelles(html):
-    """Extract (entity_name, website, email, category) per registrant.
+    """Extract (anchor, entity_name, website, email, category) per registrant.
 
     The register renders each registrant as a Bootstrap accordion card whose
     header button carries the entity name and whose `card-body` carries the
@@ -123,13 +134,15 @@ def parse_seychelles(html):
     for m in card_re.finditer(html):
         anchor, name_html, body = m.group(1), m.group(2), m.group(3)
         name = re.sub(r"<[^>]+>", "", name_html)
-        name = re.sub(r"\s+", " ", name).strip()
+        # unescape HTML entities (&amp; etc.) — entity names feed name-level
+        # B-vs-C matching (protocol section 6), so "&amp;" must become "&".
+        name = unescape(re.sub(r"\s+", " ", name).strip())
         if not name or len(name) > 160:
             continue
 
         website = email = ""
         for href in href_re.findall(body):
-            h = href.strip()
+            h = unescape(href.strip())
             if h.lower().startswith("mailto:") and not email:
                 email = h[7:]
             elif h.lower().startswith("tel:"):
@@ -138,19 +151,22 @@ def parse_seychelles(html):
                 website = h
 
         cm = cat_re.match(anchor)
-        rows.append({"entity_name": name, "website": website,
-                     "email": email,
+        rows.append({"anchor": anchor, "entity_name": name,
+                     "website": website, "email": email,
                      "category": cm.group(1) if cm else anchor})
 
-    # De-duplicate on (name, category), preserving first-seen order.
+    # De-duplicate on the accordion anchor id — the register's own unique
+    # per-entry key — preserving first-seen order. Keying on entity name
+    # would wrongly merge distinct natural persons who share a name, and
+    # would silently drop genuine repeated register entries (the archived
+    # snapshot lists one representative three times under three anchors).
     seen, out = set(), []
     for r in rows:
-        k = (r["entity_name"].lower(), r["category"])
-        if k in seen:
+        if r["anchor"] in seen:
             continue
-        seen.add(k)
+        seen.add(r["anchor"])
         out.append(r)
-    return out
+    return out, len(rows)
 
 
 PARSERS = {"seychelles_securities_dealers": parse_seychelles}
@@ -172,13 +188,14 @@ def cmd_parse():
         with open(os.path.join(RAW, latest), "rb") as f:
             body = f.read()
         html = body.decode("utf-8", errors="ignore")
-        rows = PARSERS[key](html)
+        rows, n_raw = PARSERS[key](html)
         for r in rows:
             out_rows.append({
                 "register": key,
                 "jurisdiction": juris,
                 "regulator": regulator,
                 "category": r.get("category", ""),
+                "register_anchor_id": r.get("anchor", ""),
                 "entity_name": r["entity_name"],
                 "website": r["website"],
                 "email": r.get("email", ""),
@@ -188,20 +205,43 @@ def cmd_parse():
                 "source_file": latest,
                 "source_sha256": sha256_bytes(body),
             })
-        print(f"{key}: parsed {len(rows)} entities from {latest}")
+        print(f"{key}: {n_raw} raw entries, {len(rows)} after anchor-id "
+              f"dedup ({n_raw - len(rows)} duplicate anchors) from {latest}")
 
-    path = os.path.join(ART, "frame_f2_offshore_registers.csv")
-    with open(path, "w", newline="") as f:
-        w = csv.DictWriter(f, fieldnames=[
-            "register", "jurisdiction", "regulator", "category",
-            "entity_name", "website", "email",
-            "has_licence_number", "source_file", "source_sha256"])
+    # Full parse (all categories, incl. email) stays LOCAL under data/
+    # (gitignored) — derivable from the archived HTML at any time.
+    full_fields = ["register", "jurisdiction", "regulator", "category",
+                   "register_anchor_id", "entity_name", "website", "email",
+                   "has_licence_number", "source_file", "source_sha256"]
+    local_path = os.path.join(RAW, "frame_f2_full_local.csv")
+    with open(local_path, "w", newline="") as f:
+        w = csv.DictWriter(f, fieldnames=full_fields)
         w.writeheader()
         w.writerows(out_rows)
-    print(f"written: {path} ({len(out_rows)} rows)")
-    with_site = sum(1 for r in out_rows if r["website"])
-    print(f"entities with a website recorded: {with_site}"
-          f" ({with_site / max(1, len(out_rows)):.0%})")
+    print(f"local full parse (NOT committed): {local_path} "
+          f"({len(out_rows)} rows)")
+
+    # Committed artifact: institutional categories only, no email column
+    # (protocol section 7 rule 4 — no private individuals as units of
+    # analysis; representative rows are named natural persons).
+    inst_rows = [{k: v for k, v in r.items() if k != "email"}
+                 for r in out_rows if r["category"] in INSTITUTIONAL_CATEGORIES]
+    path = os.path.join(ART, "frame_f2_offshore_registers.csv")
+    with open(path, "w", newline="") as f:
+        w = csv.DictWriter(f, fieldnames=[k for k in full_fields
+                                          if k != "email"])
+        w.writeheader()
+        w.writerows(inst_rows)
+    n_dealers = sum(1 for r in inst_rows
+                    if r["category"] == "securities-dealer")
+    n_other = len(out_rows) - n_dealers
+    print(f"written: {path} ({len(inst_rows)} institutional rows: "
+          f"{n_dealers} securities dealers "
+          f"(+{n_other} other records, of which "
+          f"{len(out_rows) - len(inst_rows)} representative rows local-only))")
+    with_site = sum(1 for r in inst_rows if r["website"])
+    print(f"institutional entities with a website recorded: {with_site}"
+          f" ({with_site / max(1, len(inst_rows)):.0%})")
     return 0
 
 
