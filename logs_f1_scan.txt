@@ -1,0 +1,13 @@
+  scanned 20M domains, 69556 matched
+  scanned 40M domains, 86954 matched
+  scanned 60M domains, 99651 matched
+  scanned 80M domains, 123831 matched
+  scanned 100M domains, 146111 matched
+{
+  "source": "https://data.commoncrawl.org/projects/hyperlinkgraph/cc-main-2026-may-jun-jul/domain/cc-main-2026-may-jun-jul-domain-vertices.txt.gz",
+  "domains_scanned": 117963409,
+  "matched": 166817,
+  "match_rate": 0.00141414,
+  "coi_exclusions_applied": 0
+}
+top exclusion reasons: [('no-vertical-token', 117670995), ('institutional-suffix', 125527), ('negative-token', 43), ('media-or-portal', 27)]

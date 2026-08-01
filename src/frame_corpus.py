@@ -116,6 +116,19 @@ def unreverse(rev):
     return ".".join(reversed(rev.split(".")))
 
 
+def name_part(domain):
+    """The registrable-name part, i.e. everything before the public suffix.
+
+    Amendment 3: a token occurring only in the public-suffix position does not
+    place a domain in F1, because the suffix is a string chosen by the
+    registry rather than by the registrant. Six generic TLDs are spelled as
+    vertical vocabulary (.cfd .capital .market .exchange .gold .markets) and
+    carried 42.4% of the raw matches.
+    """
+    parts = domain.split(".")
+    return ".".join(parts[:-1]) if len(parts) > 1 else domain
+
+
 def classify(domain, coi):
     """Return (matched, reason). reason is the exclusion code when not matched."""
     d = domain.lower()
@@ -127,6 +140,9 @@ def classify(domain, coi):
         return False, "institutional-suffix"
     if not (TOKEN_RE.search(d) or SHORT_RE.search(d)):
         return False, "no-vertical-token"
+    nm = name_part(d)
+    if not (TOKEN_RE.search(nm) or SHORT_RE.search(nm)):
+        return False, "suffix-position-only"
     if NEGATIVE_RE.search(d):
         return False, "negative-token"
     return True, ""
@@ -182,6 +198,11 @@ def cmd_scan():
         "domains_scanned": n,
         "matched": len(matched),
         "match_rate": round(len(matched) / n, 8) if n else None,
+        "matched_unrestricted": len(matched) + reasons.get(
+            "suffix-position-only", 0),
+        "frame_definition": ("registrable-name position only; see "
+                             "protocol/amendments/amendment_3_f1_suffix_"
+                             "position.md, which publishes both figures"),
         "excluded": {
             # 'no-vertical-token' is the overwhelming majority and is not an
             # exclusion in the protocol sense; it is simply non-membership.
@@ -204,6 +225,10 @@ def cmd_scan():
             "Matching a domain name says nothing about whether the site is "
             "Chinese-facing or carries a licence claim; both are established "
             "downstream by the keyless presence probe and the extractor.",
+            "F1 is recall-oriented and imprecise by construction: the "
+            "retained set still contains many domains unrelated to retail "
+            "FX/CFD. Precision is supplied downstream, and the yield at each "
+            "stage is published rather than the frame being tuned.",
         ],
     }
     with open(OUT_SUMMARY, "w") as f:

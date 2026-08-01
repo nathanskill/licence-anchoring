@@ -1,0 +1,15 @@
+  scanned 20M domains, 14578 matched
+  scanned 40M domains, 31976 matched
+  scanned 60M domains, 44673 matched
+  scanned 80M domains, 60710 matched
+  scanned 100M domains, 76239 matched
+{
+  "source": "https://data.commoncrawl.org/projects/hyperlinkgraph/cc-main-2026-may-jun-jul/domain/cc-main-2026-may-jun-jul-domain-vertices.txt.gz",
+  "domains_scanned": 117963409,
+  "matched": 96141,
+  "match_rate": 0.00081501,
+  "matched_unrestricted": 166825,
+  "frame_definition": "registrable-name position only; see protocol/amendments/amendment_3_f1_suffix_position.md, which publishes both figures",
+  "coi_exclusions_applied": 0
+}
+top exclusion reasons: [('no-vertical-token', 117670995), ('institutional-suffix', 125527), ('suffix-position-only', 70684), ('negative-token', 35), ('media-or-portal', 27)]

@@ -1,0 +1,77 @@
+{
+  "source": "https://data.commoncrawl.org/projects/hyperlinkgraph/cc-main-2026-may-jun-jul/domain/cc-main-2026-may-jun-jul-domain-vertices.txt.gz",
+  "domains_scanned": 117963409,
+  "matched": 96141,
+  "match_rate": 0.00081501,
+  "matched_unrestricted": 166825,
+  "frame_definition": "registrable-name position only; see protocol/amendments/amendment_3_f1_suffix_position.md, which publishes both figures",
+  "excluded": {
+    "no-vertical-token": 117670995,
+    "institutional-suffix": 125527,
+    "suffix-position-only": 70684,
+    "negative-token": 35,
+    "media-or-portal": 27
+  },
+  "coi_exclusions_applied": 0,
+  "pattern": {
+    "vertical_tokens": [
+      "forex",
+      "cfd",
+      "mt4",
+      "mt5",
+      "metatrader",
+      "brokers",
+      "broker",
+      "traders",
+      "trader",
+      "trading",
+      "investing",
+      "invest",
+      "capital",
+      "markets",
+      "market",
+      "prime",
+      "securities",
+      "fintech",
+      "exchange",
+      "gold",
+      "xau",
+      "futures",
+      "margin",
+      "leverage",
+      "spread",
+      "waihuiwang",
+      "waihui",
+      "huiyin",
+      "jinrong"
+    ],
+    "short_tokens": [
+      "fx",
+      "wh"
+    ],
+    "negative_tokens": [
+      "supermarket",
+      "marketplace",
+      "hypermarket",
+      "minimarket",
+      "fleamarket",
+      "flea-market",
+      "nightmarket",
+      "farmersmarket",
+      "goldsmith",
+      "goldjewel",
+      "goldenret",
+      "marketingagency",
+      "goldmine",
+      "goldfish",
+      "marketresearch"
+    ],
+    "frozen_by": "protocol/amendments/amendment_2_f1_host_regex.md"
+  },
+  "caveats": [
+    "F1 enumerates domains whose NAME carries a vertical token; a retail FX/CFD site with a non-descriptive domain is invisible to it. F1 is a name-pattern frame, not a census of the vertical.",
+    "The employer and author-property exclusions are applied from an untracked local list; only the count is published, per protocol section 7.",
+    "Matching a domain name says nothing about whether the site is Chinese-facing or carries a licence claim; both are established downstream by the keyless presence probe and the extractor.",
+    "F1 is recall-oriented and imprecise by construction: the retained set still contains many domains unrelated to retail FX/CFD. Precision is supplied downstream, and the yield at each stage is published rather than the frame being tuned."
+  ]
+}
