@@ -160,3 +160,10 @@
 {"domain": "xs.com", "crawl": "CC-MAIN-2026-25", "n_zho_captures_capped": 200, "n_captures_capped": 1000, "sample_zho_urls": ["https://www.xs.com/zh-Hans/blog/", "https://www.xs.com/zh-Hans/blog/", "https://www.xs.com/zh-Hans/blog/", "https://www.xs.com/zh-Hans/blog/%E6%AD%A2%E6%8D%9F%E5%8D%95/", "https://www.xs.com/zh-Hans/blog/%E8%83%BD%E9%87%8F%E6%BD%AE/"]}
 {"domain": "zfx.com", "crawl": "CC-MAIN-2026-25", "n_zho_captures_capped": 200, "n_captures_capped": 1000, "sample_zho_urls": ["https://www.zfx.com/zh-hans/%E8%AE%A2%E5%8D%95%E6%89%A7%E8%A1%8C%E6%94%BF%E7%AD%96/", "https://www.zfx.com/zh-hans/about-zfx/contact-us/", "https://www.zfx.com/zh-hans/academy/%E4%BA%9A%E9%A9%AC%E9%80%8A%E8%82%A1%E4%BB%B7/", "https://www.zfx.com/zh-hans/academy/%E4%BD%95%E8%B0%93%E5%9C%BA%E5%A4%96%E4%BA%A4%E6%98%93/", "https://www.zfx.com/zh-hans/academy/%E5%86%B3%E5%AE%9A%E6%8A%95%E8%B5%84%E6%96%B9%E5%90%91%E5%92%8C%E5%BF%83%E6%80%81/"]}
 {"domain": "zxcm.com", "crawl": "CC-MAIN-2026-25", "n_zho_captures_capped": 0, "n_captures_capped": 92, "sample_zho_urls": []}
+{"domain": "alcogal.com", "crawl": "CC-MAIN-2026-25", "n_zho_captures_capped": 0, "n_captures_capped": 182, "sample_zho_urls": []}
+{"domain": "allyprofessional.com", "crawl": "CC-MAIN-2026-25", "n_zho_captures_capped": 0, "n_captures_capped": 0, "sample_zho_urls": []}
+{"domain": "alpha-consulting.expert", "crawl": "CC-MAIN-2026-25", "n_zho_captures_capped": 0, "n_captures_capped": 0, "sample_zho_urls": []}
+{"domain": "ame.bz", "crawl": "CC-MAIN-2026-25", "n_zho_captures_capped": 0, "n_captures_capped": 1, "sample_zho_urls": []}
+{"domain": "arifa.com", "crawl": "CC-MAIN-2026-25", "n_zho_captures_capped": 0, "n_captures_capped": 0, "sample_zho_urls": []}
+{"domain": "aspenasset.bz", "crawl": "CC-MAIN-2026-25", "n_zho_captures_capped": 0, "n_captures_capped": 2, "sample_zho_urls": []}
+{"domain": "atkinsincorporate.com", "crawl": "CC-MAIN-2026-25", "n_zho_captures_capped": 0, "n_captures_capped": 1, "sample_zho_urls": []}
