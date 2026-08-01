@@ -169,13 +169,24 @@ def cmd_probe():
             n_zho, sample = cc_query(d, zho_only=True, limit=ZHO_CAP)
             time.sleep(PAUSE)
             n_all, _ = cc_query(d, zho_only=False, limit=ANY_CAP)
+            # A failed query is NOT written. --probe skips any domain already
+            # present in the file, so persisting a -1 would make a transient
+            # index outage permanent: the domain would never be re-queried and
+            # a service failure would sit in the frame looking like a probed
+            # domain. Leaving it unwritten keeps it in the to-do list for the
+            # next run, which is what "resumable" has to mean when the index
+            # is intermittently returning 502/504.
+            if n_zho < 0 or n_all < 0:
+                print(f"[{i}/{len(todo)}] {d:<34} QUERY FAILED "
+                      f"({sample[:1]}) — not recorded, will retry next run")
+                continue
             rec = {"domain": d, "crawl": CC_INDEX,
                    "n_zho_captures_capped": n_zho,
                    "n_captures_capped": n_all,
                    "sample_zho_urls": sample}
             out.write(json.dumps(rec) + "\n")
             out.flush()
-            flag = "ZHO" if n_zho > 0 else ("err" if n_zho < 0 else "-")
+            flag = "ZHO" if n_zho > 0 else "-"
             print(f"[{i}/{len(todo)}] {d:<34} zho={n_zho:<5} any={n_all:<5} {flag}")
             time.sleep(PAUSE)
     return 0
