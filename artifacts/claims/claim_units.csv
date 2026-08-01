@@ -1,0 +1,44 @@
+domain,authority,register,id_scheme,identifier,named_entity,n_pages,has_authority,has_identifier,has_entity,example_sentence,example_url
+atcbrokers.com,,,FRN,1448274,,14,0,1,0,FRN 1448274,https://atcbrokers.com/cn/help-center/education/
+atcbrokers.com,,,FRN,591361,,14,0,1,0,FRN 591361,https://atcbrokers.com/cn/help-center/education/
+blackbull.com,,,FSP,1002113,,2,0,1,0,注册 FSP1002113,https://blackbull.com/zh-hans/support/how-to-download-metatrader-5-mt5-on-mobile/
+darwinex.com,FCA,UK FCA Financial Services Register,,,,5,1,0,0,受 FCA 和 CNMV 监管的经纪商,https://www.darwinex.com/zh/invest/JTL
+darwinex.com,FCA,UK FCA Financial Services Register,FRN,586466,,1,1,1,0,FCA) 监管和授权，注册号为 FRN 586466,https://www.darwinex.com/zh/invest/JTL
+dbinvesting.com,,,GENERIC,20200000,,40,0,1,0,许可证号 20200000,https://dbinvesting.com/zh-hans/accounts-types/
+dbinvesting.com,,,GB,25204845,,40,0,1,0,GB25204845,https://dbinvesting.com/zh-hans/accounts-types/
+dbinvesting.com,,,GENERIC,M22286159,,40,0,1,0,注册号 M22286159,https://dbinvesting.com/zh-hans/accounts-types/
+dbinvesting.com,FSC-MU,Mauritius FSC Online Public Register,GB,25204845,,40,1,1,0,受毛里求斯金融服务委员会 (FSC) 监管，作为一名投资交易商，牌照编号为：GB25204845,https://dbinvesting.com/zh-hans/accounts-types/
+fpmarkets.com,ASIC,ASIC Professional Registers,,,,1,1,0,0,FP Markets 是一个受多重监管的品牌，获得澳大利亚证券和投资委员会 (ASIC)、塞浦路斯证券交易委员会 (CySec)、南非金融部门行为监管局 (F,https://zhcn.fpmarkets.com/int/
+fpmarkets.com,FSA-SC,Seychelles FSA capital-markets register,SD,130,First Prudential Markets Limited,6,1,1,1,First Prudential Markets Limited，一家受塞舌尔金融服务管理局监管的投资交易商公司，许可证号为 SD130,https://zhcn.fpmarkets.com/int/
+fpmarkets.com,FSCA,South Africa FSCA FSP register,FSP,50926,FP Markets (Pty,6,1,1,1,FP Markets (Pty) Ltd，一家受南非金融部门行为监管局 (FSCA) 授权和监管的金融服务提供商（FSP 编号 50926）,https://zhcn.fpmarkets.com/int/
+fusionmarkets.com,,,SD,096,Markets International Ltd,8,0,1,1,n Markets International Ltd as Fusion Markets is a registered Securities Dealer regulated by the Financial Services Authority of Seychelles (license number SD096),https://fusionmarkets.com/zh/About-us/ID-documentation
+fusionmarkets.com,ASIC,ASIC Professional Registers,,,FMGP Trading Group Pty Ltd,8,1,0,1,ets is a trading name of FMGP Trading Group Pty Ltd (ABN 74 146 086 017) and is regulated by ASIC and licensed to carry on a financial services business in Australia under Australian Financial Services License No,https://fusionmarkets.com/zh/About-us/ID-documentation
+fusionmarkets.com,VFSC,Vanuatu FSC register,,,,8,1,0,0,Fusion Markets EN is a registered Vanuatu company (company number 40256) and is regulated by the VFSC,https://fusionmarkets.com/zh/About-us/ID-documentation
+fxcentrum.com,,,SD,055,,40,0,1,0,许可证号 SD055,https://zh-cn.fxcentrum.com/
+fxcentrum.com,FCA,UK FCA Financial Services Register,,,,2,1,0,0,提示 1：在为真实账户注资之前，务必核实该平台是否受 FCA 或同等机构监管，以及是否提供 FSCS 或其他保障措施,https://zh-cn.fxcentrum.com/forex/best-trading-platform-in-the-uk/
+icmarkets.sc,,,SD,018,Trading Ltd,6,0,1,1,"aw Trading Ltd registered in Seychelles with registration number: 8419879-1, is regulated by the Financial Services Authority of Seychelles with License number: SD018",https://www.icmarkets.sc/global/tw/
+icmarkets.sc,FCA,UK FCA Financial Services Register,FRN,739090,Pelican Exchange Limited,1,1,1,1,* Pelican Exchange Limited 是 London and Eastern LLP 的指定代表，受英国金融行为监管局（FCA）授权和管理，注册号为 FCA 739090 和 534484,https://www.icmarkets.sc/cn/social-trading-tools/social-trading-mobile-app
+icmarkets.sc,FSA-SC,Seychelles FSA capital-markets register,SD,018,Raw Trading Ltd,14,1,1,1,Raw Trading Ltd 受塞舌尔金融服务管理局（FSA）监管，证券交易商牌照编号为 SD018,https://www.icmarkets.sc/cn/company/legal-documents
+iux.com,,,GB,22200605,,1,0,1,0,GB22200605,https://www.iux.com/zh/company/regulation
+iux.com,ASIC,ASIC Professional Registers,AFSL?,529610,IUX Markets AU Pty.,1,1,1,1,"IUX Markets AU Pty. Ltd. 受澳大利亚证券和投资委员会（ASIC）监管，许可证编号为 529610，注册办公地址为 Suite 6.04, Level 6, 10 Bridge Street",https://www.iux.com/zh/company/regulation
+iux.com,FSC-MU,Mauritius FSC Online Public Register,GB,22200605,,1,1,1,0,IUX MARKETS (MU) LTD 受毛里求斯金融服务委员会 (FSC) 监管，许可证编号为 GB22200605，是一家投资交易商（全方位服务交易商，不包括承销）,https://www.iux.com/zh/company/regulation
+m4markets.com,,,SD,035,,40,0,1,0,牌照号 SD035,https://m4markets.com/zh-hans/
+m4markets.com,,,GENERIC,301,,40,0,1,0,牌照号 301,https://m4markets.com/zh-hans/
+m4markets.com,,,GENERIC,8425037,,40,0,1,0,注册号 8425037,https://m4markets.com/zh-hans/
+m4markets.com,,,GENERIC,F007051,,40,0,1,0,牌照号 F007051,https://m4markets.com/zh-hans/
+m4markets.com,CySEC,CySEC regulated entities register,,,,4,1,0,0,M4Markets 受到三大权威监管机构的监管：塞舌尔金融服务管理局（FSA）、塞浦路斯证券交易委员会（CySEC）和迪拜金融服务管理局（DFSA），体现了,https://m4markets.com/zh-hans/%E4%B8%8E%E4%B8%89%E9%87%8D%E7%9B%91%E7%AE%A1%E7%BB%8F%E7%BA%AA%E5%95%86%E4%BA%A4%E6%98%93%E5%B7%AE%E4%BB%B7%E5%90%88%E7%BA%A6-15/
+m4markets.com,CySEC,CySEC regulated entities register,CySEC,301/16,,80,1,1,0,CySEC) 授权和监管，牌照号 301/16,https://m4markets.com/zh-hans/
+pepperstone.com,,,GENERIC,177174,,1,0,1,0,注册号177174,https://pepperstone.com/zh/
+rock-west.com,,,SD,044,,13,0,1,0,牌照号 SD044,https://www.rock-west.com/zh/blank-1
+rock-west.com,,,GENERIC,8425341,,13,0,1,0,注册号 8425341,https://www.rock-west.com/zh/blank-1
+t4trade.com,,,SD,029,,3,0,1,0,许可证号 SD029,https://partners.t4trade.com/zh/
+tradequo.com,,,SD,140,Trade Quo Global Ltd,5,0,1,1,"Trade Quo Global Ltd, a securities dealer firm that is authorized and regulated by the Seychelles Financial Services Authority (FSA) with license number SD140",https://tradequo.com/zh/company/business
+xs.com,,,GB,25204786,,40,0,1,0,GB25204786,https://www.xs.com/zh-Hans/blog/
+xs.com,ASIC,ASIC Professional Registers,,,XS Prime Ltd,40,1,0,1,XS Prime Ltd 受澳大利亚证券和投资委员会 (ASIC) 监管，监管牌照编号：374409,https://www.xs.com/zh-Hans/blog/
+xs.com,ASIC,ASIC Professional Registers,AFSL?,374409,,40,1,1,0,牌照 ASIC 374409,https://www.xs.com/zh-Hans/blog/
+xs.com,CySEC,CySEC regulated entities register,CySEC,412/22,XS Markets Ltd,40,1,1,1,XS Markets Ltd 受塞浦路斯证券交易委员会 (CySEC) 监管，监管牌照编号：412/22,https://www.xs.com/zh-Hans/blog/
+xs.com,FSA-SC,Seychelles FSA capital-markets register,SD,089,XS Ltd,40,1,1,1,XS Ltd 受塞舌尔金融服务管理局 (FSA) 监管，监管牌照编号：SD089,https://www.xs.com/zh-Hans/blog/
+xs.com,FSC-MU,Mauritius FSC Online Public Register,GB,25204786,XS Trade Services Ltd,40,1,1,1,XS Trade Services Ltd 受毛里求斯金融服务委员会（FSC）监管，监管牌照编号：GB25204786,https://www.xs.com/zh-Hans/blog/
+xs.com,FSCA,South Africa FSCA FSP register,,,XS ZA (Pty,40,1,0,1,XS ZA (Pty) Ltd 受南非金融部门行为监管局 (FSCA) 监管，监管牌照编号：53199,https://www.xs.com/zh-Hans/blog/
+xs.com,LFSA,Labuan FSA financial institutions directory,MB,21/0081,XS Finance Ltd,40,1,1,1,XS Finance Ltd 受马来西亚纳闽金融服务管理局 (LFSA) 监管，监管牌照编号：MB/21/0081,https://www.xs.com/zh-Hans/blog/
+zfx.com,FCA,UK FCA Financial Services Register,,,,1,1,0,0,然而，它的严肃性是不容置疑的，因为它受到英国金融行为监管局的监管,https://www.zfx.com/zh-hans/academy/cac-40%E6%8C%87%E6%95%B0/

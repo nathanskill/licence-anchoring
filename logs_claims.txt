@@ -1,0 +1,27 @@
+[1/26] atcbrokers.com: 14 pages, 14 to fetch
+[2/26] atfx.com: index failed: HTTP Error 504: Gateway Time-out
+[3/26] axiontrade.net: index failed: HTTP Error 504: Gateway Time-out
+[4/26] blackbull.com: 2 pages, 2 to fetch
+[5/26] darwinex.com: 2 pages, 2 to fetch
+[6/26] dbinvesting.com: 40 pages, 40 to fetch
+[7/26] ecmarkets.sc: index failed: HTTP Error 504: Gateway Time-out
+[8/26] errante.com: index failed: HTTP Error 504: Gateway Time-out
+[9/26] etoro.com: 9 pages, 9 to fetch
+[10/26] fpmarkets.com: 9 pages, 9 to fetch
+[11/26] fusionmarkets.com: 8 pages, 8 to fetch
+[12/26] fxcentrum.com: 40 pages, 40 to fetch
+[13/26] fxon.com: 1 pages, 1 to fetch
+[14/26] icmarkets.sc: 13 pages, 13 to fetch
+[15/26] iux.com: 40 pages, 40 to fetch
+[16/26] m4markets.com: 40 pages, 40 to fetch
+[17/26] pepperstone.com: 40 pages, 40 to fetch
+[18/26] rock-west.com: 13 pages, 13 to fetch
+[19/26] t4trade.com: 3 pages, 3 to fetch
+[20/26] tradequo.com: 5 pages, 5 to fetch
+[21/26] tradewill.com: 4 pages, 4 to fetch
+[22/26] trive.com: 1 pages, 1 to fetch
+[23/26] windsorbrokers.com: 40 pages, 40 to fetch
+[24/26] xm.com: 9 pages, 9 to fetch
+[25/26] xs.com: 40 pages, 40 to fetch
+[26/26] zfx.com: 40 pages, 40 to fetch
+done

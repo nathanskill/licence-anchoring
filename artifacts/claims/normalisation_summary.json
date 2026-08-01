@@ -1,0 +1,31 @@
+{
+  "source_pages": 413,
+  "domains": 22,
+  "raw_sentences": 2501,
+  "claim_units": 43,
+  "units_with_authority_and_identifier": 14,
+  "units_authority_only": 9,
+  "vague_assertions": 63,
+  "domains_with_vague_only": 2,
+  "domains_with_operative_sentence": 5,
+  "operative_candidates": 5,
+  "units_per_domain": {
+    "xs.com": 8,
+    "m4markets.com": 6,
+    "dbinvesting.com": 4,
+    "fpmarkets.com": 3,
+    "fusionmarkets.com": 3,
+    "icmarkets.sc": 3,
+    "iux.com": 3,
+    "atcbrokers.com": 2,
+    "darwinex.com": 2,
+    "fxcentrum.com": 2,
+    "rock-west.com": 2,
+    "blackbull.com": 1,
+    "pepperstone.com": 1,
+    "t4trade.com": 1,
+    "tradequo.com": 1,
+    "zfx.com": 1
+  },
+  "note": "Claim units are (domain, authority, identifier scheme, identifier, named entity) tuples deduplicated across pages; n_pages records how many archived pages carried the unit. No A/B/C/D coding is applied here: coding requires register verification and the operative-entity determination (protocol sections 5-6)."
+}
