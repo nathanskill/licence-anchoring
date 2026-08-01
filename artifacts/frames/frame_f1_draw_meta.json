@@ -1,0 +1,21 @@
+{
+  "seed": 20260723,
+  "draw_size_requested": 1000,
+  "drawn": 1000,
+  "allocation": {
+    "Belize": {
+      "n": 7,
+      "basis": "census (stratum smaller than draw)"
+    },
+    "Seychelles": {
+      "n": 27,
+      "basis": "census (stratum smaller than draw)"
+    },
+    "no offshore entity": {
+      "n": 966,
+      "basis": "seeded random sample"
+    }
+  },
+  "rule": "amendment_4_f1_stratum_cap.md",
+  "note": "not proportional and not capped; small strata censused, large stratum randomly sampled, so F1 counts are not projectable by simple scaling"
+}

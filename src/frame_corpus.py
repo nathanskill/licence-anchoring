@@ -42,6 +42,8 @@ ART = os.path.join(ROOT, "artifacts", "frames")
 F2 = os.path.join(ART, "frame_f2_offshore_registers.csv")
 OUT_MATCHES = os.path.join(ART, "frame_f1_matched_domains.csv")
 OUT_SUMMARY = os.path.join(ART, "frame_f1_summary.json")
+OUT_DRAW = os.path.join(ART, "frame_f1_draw.csv")
+OUT_DRAW_META = os.path.join(ART, "frame_f1_draw_meta.json")
 
 VERTICES_URL = ("https://data.commoncrawl.org/projects/hyperlinkgraph/"
                 "cc-main-2026-may-jun-jul/domain/"
@@ -50,7 +52,8 @@ UA = ("licence-anchoring-research/1.0 (academic measurement; "
       "contact via github.com/nathanskill/licence-anchoring)")
 
 SEED = 20260723
-STRATUM_CAP = 0.40          # no stratum may exceed this share of the sample
+STRATUM_CAP = 0.40          # amendment 2; superseded for F1 by amendment 4
+DRAW_SIZE = 1000            # probe budget for this stage, stated not implied
 
 # ---- FROZEN PATTERN (amendment 2; do not edit without a new amendment) ----
 
@@ -259,8 +262,40 @@ def cmd_sample():
     print("F1 strata:")
     for k, v in sorted(strata.items(), key=lambda x: -len(x[1])):
         print(f"  {k:<24} {len(v)}")
-    print(f"\nseed {SEED}; cap {STRATUM_CAP:.0%} per stratum "
-          f"(draw size is set at sampling time against the N=80 target)")
+
+    # Amendment 4: the 40% cap from amendment 2 cannot bind on this frame
+    # (96,107 vs 27 vs 7). Small strata are censused; the remainder is drawn
+    # at random from the large one; the realised allocation is published.
+    big = max(strata, key=lambda k: len(strata[k]))
+    drawn, alloc = [], {}
+    for k, v in sorted(strata.items()):
+        if k == big:
+            continue
+        drawn.extend(sorted(v))
+        alloc[k] = {"n": len(v), "basis": "census (stratum smaller than draw)"}
+    remainder = max(0, DRAW_SIZE - len(drawn))
+    pool = sorted(strata[big])
+    take = rng.sample(pool, min(remainder, len(pool)))
+    drawn.extend(take)
+    alloc[big] = {"n": len(take), "basis": "seeded random sample"}
+
+    with open(OUT_DRAW, "w", newline="") as f:
+        w = csv.writer(f)
+        w.writerow(["domain", "stratum"])
+        inv = {d: k for k, v in strata.items() for d in v}
+        for d in drawn:
+            w.writerow([d, inv.get(d, "")])
+    with open(OUT_DRAW_META, "w") as f:
+        json.dump({"seed": SEED, "draw_size_requested": DRAW_SIZE,
+                   "drawn": len(drawn), "allocation": alloc,
+                   "rule": "amendment_4_f1_stratum_cap.md",
+                   "note": ("not proportional and not capped; small strata "
+                            "censused, large stratum randomly sampled, so "
+                            "F1 counts are not projectable by simple scaling")},
+                  f, indent=2)
+    print(f"\nseed {SEED}; drew {len(drawn)} domains -> {OUT_DRAW}")
+    for k, v in alloc.items():
+        print(f"  {k:<24} {v['n']:>5}  {v['basis']}")
     return 0
 
 
