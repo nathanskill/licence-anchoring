@@ -1,0 +1,110 @@
+[
+ {
+  "claim_id": "CY-1",
+  "record_exists": "yes",
+  "holder_name_matches": "exact",
+  "holder_name_official": "ATFX Global Markets (Cy) Ltd",
+  "register_url": "https://www.cysec.gov.cy/en-GB/entities/investment-firms/cypriot/76537/",
+  "status_notes": "Authorised 17/12/2015; entry live on register as of 2026-08-01 with no suspension, withdrawal or cancellation annotation. Previous name on register: Positiva Markets (Cy) Ltd. Company registration number 340674. Approved trade names: ATFXGM, ATFX Connect EU.",
+  "notes": "Licence 285/15 exists and is held by ATFX Global Markets (Cy) Ltd; the claimed name differs only in capitalisation/punctuation ('(CY)' vs '(Cy)'). Observable domain relationship: the claim was extracted from a page on atfx.com, while the register entry lists approved domains atfxgm.eu, atfx.eu and www.atfxconnect.com/en-eu/ — atfx.com is not among the domains listed on this register entry."
+ },
+ {
+  "claim_id": "CY-2",
+  "record_exists": "yes",
+  "holder_name_matches": "exact",
+  "holder_name_official": "XS Markets Ltd (ex RockFrost Ltd)",
+  "register_url": "https://www.cysec.gov.cy/en-GB/entities/investment-firms/cypriot/92585/",
+  "status_notes": "Authorised 04/04/2022; entry live on register as of 2026-08-01 with no suspension, withdrawal or cancellation annotation. Former name on register: RockFrost Ltd. Company registration number HE 386563. Approved trade name: XS Markets.",
+  "notes": "Licence 412/22 exists and is held by XS Markets Ltd, matching the name stated on the page. Observable domain relationship: the claim was extracted from a page on xs.com, while the register entry lists www.xsmarkets.com as the approved domain — xs.com is not the domain listed on this register entry."
+ },
+ {
+  "claim_id": "UK-1",
+  "record_exists": "yes",
+  "holder_name_official": "AT Global Markets (UK) Limited",
+  "holder_name_matches": "close-variant",
+  "register_url": "https://register.fca.org.uk/s/firm?id=001b000003Wh27RAAR",
+  "notes": "Checked live on the FCA Financial Services Register on 2026-08-01 (search https://register.fca.org.uk/s/search?q=760555&type=Companies returned exactly one firm). FRN 760555 exists and is held by 'AT Global Markets (UK) Limited'; the page names 'AT Global Markets (UK) Ltd.' - the only difference is the standard abbreviation 'Ltd.' for 'Limited', i.e. the same legal name in abbreviated form. Registered company number 09827091; address ATFX Connect, Leaf C, 35th Floor, Tower 42, 25 Old Broad Street, London EC2N 1HQ; website www.atfxconnect.com; email compliance.uk@atfx.com. The firm record states it 'is authorised for specific activities and product types' and currently trades under 4 trading names.",
+  "status_notes": "Status: Authorised, since 11/07/2017. Firm type: Regulated. The register page additionally carries FCA notices listing nine 'clone of FCA authorised firm' entries associated with this firm's details (e.g. 'ATFX (clone of FCA authorised firm)' added 17 Dec 2019, 'ATFX Global Markets (clone of FCA Authorised firm)' added 18 Feb 2022) - these are the FCA's own register notices about third parties using the firm's details, recorded here as register content only."
+ },
+ {
+  "claim_id": "AU-1",
+  "record_exists": "yes",
+  "holder_name_official": "AT GLOBAL MARKETS (AUSTRALIA) PTY LTD",
+  "holder_name_matches": "exact",
+  "register_url": "https://service.asic.gov.au/search/",
+  "notes": "Checked live on 2026-08-01 in the ASIC Professional Registers Search (the current official AFS licensee search at service.asic.gov.au/search/, linked from https://www.asic.gov.au/online-services/search-asic-registers/professional-registers-search/; the search tool states AFS licensee data is 'the latest information'; it is an application without stable deep links - search term '418036', register 'Australian financial services licensees'). AFSL 418036 exists and the current licensee name is AT GLOBAL MARKETS (AUSTRALIA) PTY LTD, matching the page's named entity 'AT Global Markets (Australia) Pty Ltd' (case/format differences only). ACN 153 803 804, ABN 99 153 803 804; principal place of business 'Gateway' SE 3302 L 33, 1 Macquarie Pl, Sydney NSW 2000; principal website on the register: https://www.atfx.com/en-au. Former names on the licence record (shown with asterisk in results): FXASIA PTY LTD and RAKUTEN SECURITIES AUSTRALIA PTY LTD. Note: the legacy ASIC Connect interface (connectonline.asic.gov.au) redirected to ASIC's service-availability page during today's scheduled maintenance window (Sat 1 Aug 6:30 pm - Sun 2 Aug 6:30 pm AEST); the Professional Registers Search remained available and was used instead.",
+  "status_notes": "Status: Current. Licence commenced 02/05/2012. Register data current as displayed at time of check (AFS licensee data described by the tool as latest; other registers as of 5:00 AM AEST 01 August 2026)."
+ },
+ {
+  "claim_id": "AU-2",
+  "record_exists": "yes",
+  "holder_name_official": "XS PRIME LTD",
+  "holder_name_matches": "exact",
+  "register_url": "https://service.asic.gov.au/search/",
+  "notes": "Checked live on 2026-08-01 in the ASIC Professional Registers Search (search term '374409'). AFSL 374409 exists and the current licensee name on the register is XS PRIME LTD (ACN 141 194 934, ABN 92 141 194 934), which matches the entity named on the page ('XS Prime Ltd'; case/format differences only). Principal place of business: Yewen Li - XS Prime Ltd, 'Morris Mennilli', SE 701 L 7, 92 Pitt St, Sydney NSW 2000. Principal website on the register: 'No website supplied'. Name history of this licence: EMISSION CAPITAL MANAGEMENT LTD 13/09/2010-26/06/2014; EC PARTNERS MANAGEMENT LTD 27/06/2014-14/04/2016; RUIZEAN FUNDS MANAGEMENT LTD 15/04/2016-05/01/2021; ACQUACAP LTD 06/01/2021-02/11/2022; current name XS PRIME LTD since 02/11/2022. Two-step result: (i) record exists; (ii) the licence-holder name as currently registered is the same name the page uses. Whether the company on the register is the operator of xs.com is not determinable from the register itself; the register lists no website for the licensee.",
+  "status_notes": "Status: Current. Licence commenced 13/09/2010. Scope observable on the register (licence conditions as at 05/12/2025): every authorisation - financial product advice, dealing (issue and on-behalf-of), and custodial/depository services across derivatives, foreign exchange contracts, securities, managed investment schemes and basic deposit products - is limited to WHOLESALE CLIENTS only; no retail-client authorisation appears in the conditions table. AFS licensee's auditor: Hall Chadwick (NSW), commenced 31/08/2023."
+ },
+ {
+  "claim_id": "SC-1",
+  "record_exists": "yes",
+  "holder_name_matches": "exact",
+  "holder_name_official": "XS LTD",
+  "register_url": "https://fsaseychelles.sc/regulated-entities/capital-markets",
+  "status_notes": "Listed in the Securities Dealer section of the FSA Seychelles capital-markets register (checked live 2026-08-01). Register entry shows address (3rd Floor, Azores Building, Ile du Port, Mahe), contact email info@xs.com, website https://www.xs.com, and associated individual Giorgos Kadis. The register displays NO licence numbers, NO status designations, and NO authorisation dates for any entity.",
+  "notes": "Two-step result recorded separately. (i) Name-level: an entity named XS LTD appears on the official FSA Seychelles capital-markets register, matching the page's named licence holder 'XS Ltd'. (ii) Number-level: the claimed licence number SD089 is NOT verifiable from official sources today - the register page publishes names without SD numbers, and site-restricted searches of fsaseychelles.sc (site search and ?s=SD089, plus searches for 'XS Ltd' in FSA press releases/regulatory updates) return no official document tying SD089 to XS Ltd. Other FSA regulatory updates do use SD-number nomenclature for securities dealers (e.g. SD017, SD098), confirming the numbering scheme exists, but SD089 itself appears in no indexed official FSA document. Number-level verdict: UNVERIFIABLE-TODAY from the official register; name-level verdict: verified. This instantiates the protocol's documented register limitation (names published, numbers not)."
+ },
+ {
+  "claim_id": "SC-2",
+  "record_exists": "yes",
+  "holder_name_matches": "exact",
+  "holder_name_official": "Zeal Capital Market (Seychelles) Limited",
+  "register_url": "https://fsaseychelles.sc/regulated-entities/capital-markets",
+  "status_notes": "Listed in the Securities Dealer section of the live FSA Seychelles capital-markets register (checked 2026-08-01). Entry shows address (Room 2, Green Corner Building, Providence Industrial Estate, Mahe), email cs@zfx.com, website https://www.zfx.com, and trade names field reading 'ZFX; and TRAZE'. No licence number, status designation, or dates are displayed on the register.",
+  "notes": "Both steps verified at name level. (i) The claimed record exists: Zeal Capital Market (Seychelles) Limited appears on the live official register, confirming the archived copy. (ii) The register itself lists 'ZFX; and TRAZE' as trade names of this entity, which corroborates the page's statement that ZFX and Traze are approved trading names of the licence holder. No licence number is available from the register page, and no official fsaseychelles.sc document supplying a number for this entity was found today; number-level detail remains unverifiable from official sources (same register limitation as SC-1)."
+ },
+ {
+  "claim_id": "ZA-1",
+  "record_exists": "yes",
+  "holder_name_matches": "exact",
+  "holder_name_official": "AT GLOBAL MARKETS SA (PTY) LTD",
+  "register_url": "https://www2.fsca.co.za/Fais/Search_FSP.htm",
+  "status_notes": "Official FSCA 'Search Authorised and Applied FSPs' tool (legacy search reached via https://www.fsca.co.za/Entity-Persons-Search/?iframe_target=financial-services-providers; results generated by POST so no stable results URL) returns exactly one match for name 'AT Global Markets': FSP No 44816, FSP Name 'AT GLOBAL MARKETS SA (PTY) LTD', Status 'Authorized' (checked 2026-08-01). The public search view shows no authorisation/cancellation/suspension dates. Notable: the register's 'Trading Name' column for FSP 44816 is BLANK - the page's claim that 'ATFX SA' and 'ATFX Connect' are trading names of this entity is not reflected in the trading-name field of the public FSP search result (the register neither lists nor contradicts specific trading names elsewhere in this view).",
+  "notes": "(i) Record exists: yes, FSP 44816, status Authorized on the official FSCA register. (ii) Name match: the page names AT Global Markets SA (Pty) Ltd. and the register holder is AT GLOBAL MARKETS SA (PTY) LTD - exact. Vantage/locale observation flagged per task: the operative sentence appeared on a Chinese-language page under atfx.com/zh-au/ paths - i.e. a zh-AU (Australian-Chinese) locale page whose operative regulatory sentence names the SOUTH AFRICAN group entity; the relationship is cross-jurisdictional (page locale AU/zh, named licence holder ZA) and is recorded here as an observable page-to-register relationship, not characterised further. Register limitation noted: FSCA public search confirms number and status but its trading-name field is empty for this FSP, so the trading-name component of the claim is unverifiable from the register view available today."
+ },
+ {
+  "claim_id": "MU-1",
+  "record_exists": "yes",
+  "holder_name_official": "AT Global Markets Intl Ltd",
+  "holder_name_matches": "exact",
+  "register_url": "https://opr.fscmauritius.org/ords/opr/r/fsc-opr/fsc-online-public-register-opr",
+  "status_notes": "Register shows: Date of Licence 23/07/2018; Type of Licence SEC-2.1B Investment Dealer (Full Service Dealer excluding Underwriting); Licensee Status 'COMPANY IS INCORPORATED'; no annotations; management company CREDENTIA INTERNATIONAL MANAGEMENT LTD; address Silicon Avenue 40, Cybercity, Ebene, Mauritius. Checked live on FSC Mauritius Online Public Register (OPR) on 2026-08-01.",
+  "notes": "Step (i): a record exists — OPR name search for 'AT Global Markets' returns exactly one licensee. Step (ii): register name 'AT Global Markets Intl Ltd' matches the page-named 'AT Global Markets Intl. Ltd' (punctuation difference only). Licence category on the register (Investment Dealer, Full Service Dealer excluding Underwriting, under the Securities Act 2005) is consistent with the page's claim of FSC regulation. Caveat: the OPR does not display licence numbers, so the specific number C118023331 could neither be confirmed nor contradicted against the register display; the number's format is consistent with FSC licence-code conventions."
+ },
+ {
+  "claim_id": "MU-2",
+  "record_exists": "no",
+  "holder_name_official": "DB Invest (MY) Limited (nearest register record; the names on the pages do not appear in the register)",
+  "holder_name_matches": "different-entity",
+  "register_url": "https://opr.fscmauritius.org/ords/opr/r/fsc-opr/fsc-online-public-register-opr",
+  "status_notes": "OPR name searches performed 2026-08-01: 'DB Investing' — no data found; 'DB Group' — no data found; 'Enigma' — only 'ENIGMA TCG Investment Managers Ltd' (SEC-4.2 CIS Manager, 14/11/2024), a differently named entity; 'DB Invest' — one record: 'DB Invest (MY) Limited', Date of Licence 14/11/2025, SEC-2.1B Investment Dealer (Full Service Dealer excluding Underwriting), Licensee Status 'COMPANY IS INCORPORATED', management company Premier Financial Services Limited, address Sterling Tower, 14 Poudriere Street, Port Louis.",
+  "notes": "Step (i): the claimed record — an Investment Dealer licence numbered GB25204845 held by 'DB Investing' — does not appear in the register: no licensee named 'DB Investing', 'DB Group Holding Limited', or 'Enigma081 Limited' exists on the OPR, and the OPR offers no licence-number search, so GB25204845 cannot be looked up as a number; note that 'GB'-prefixed numbers are Global Business Licence company identifiers issued under the Financial Services Act, a different instrument from an Investment Dealer licence under the Securities Act. Step (ii): the register does contain an Investment Dealer licence held by 'DB Invest (MY) Limited' (14/11/2025); this name is a variant of 'DB Invest Limited' named in separate crawl hits, but none of the entities actually named on the dbinvesting.com Chinese page ('DB Investing' as operator brand) appears as a licence holder. Observable relationship: an Investment Dealer licence exists and is held by DB Invest (MY) Limited; the page names DB Investing (and elsewhere DB Invest Limited / DB Group Holding Limited / Enigma081 Limited) as the operator, and cites a GB-series company identifier as the licence number."
+ },
+ {
+  "claim_id": "MY-1",
+  "record_exists": "yes",
+  "holder_name_official": "XS Finance Limited (formerly known as Blaza International Ltd.)",
+  "holder_name_matches": "exact",
+  "register_url": "https://www.labuanfsa.gov.my/areas-of-business/financial-services/money-broking/list-of-money-brokers",
+  "status_notes": "Labuan FSA Financial Institutions Directory, 'Money Brokers' list, last updated Wed 29 Jul 2026: 'XS Finance Limited (formerly known as Blaza International Ltd.)' is on the current list of licensed money brokers. The online directory does not display licence numbers or licence dates. Checked live 2026-08-01.",
+  "notes": "Step (i): a record exists — the entity appears on the regulator's official current Money Brokers list. Step (ii): register name 'XS Finance Limited' matches the page-named 'XS Finance Ltd' (standard abbreviation only); the register also records a former name, Blaza International Ltd. Licence type: inclusion on the Money Brokers list corresponds to a Labuan money-broking licence, consistent with the 'MB' prefix in the claimed number MB/21/0081; the specific number itself is not published in the online directory and so could not be confirmed against the register display."
+ },
+ {
+  "claim_id": "AE-1",
+  "record_exists": "yes",
+  "holder_name_official": "ATFX MENA FINANCIAL SERVICES LLC",
+  "holder_name_matches": "exact",
+  "register_url": "https://www.uaecma.gov.ae/en/open-data/licensed-companies.aspx?q=CP-0000953",
+  "status_notes": "Register record (checked live 2026-08-01): Company Name ATFX MENA FINANCIAL SERVICES LLC; Status Active; Establish Date 01-May-2023; City Dubai (Land Mark Tower, Unit 901, Marina, P.O. Box 487144). Licenses Granted tab: 'Financial Consultations' — Active; 'Introduction' — Active. The record page carries a regulator Notice stating the company 'holds only a Category 5 license' and 'is not licensed by the Securities and Commodities Authority (SCA) to conduct brokerage activities in financial derivatives contracts, unregulated commodity contracts, or spot foreign exchange (Spot FX) trading', nor to conduct trading operations, manage portfolios, or execute clients' orders for such products.",
+  "notes": "Step (i): the record exists on the UAE securities regulator's licensed-companies register. Step (ii): the register holder name is identical to the page-named entity. Authority naming: the historic regulator domain sca.gov.ae returns a 301 redirect to uaecma.gov.ae, whose site is branded 'Capital Market Authority', while the register text itself still refers to the Securities and Commodities Authority (SCA); so the page's '阿联酋资本市场管理局（CMA）' corresponds to the regulator's current site branding, and the licence of record was issued by the UAE federal securities regulator (SCA, now presented as CMA) — the named authority is not a different body. The claimed 'Category 5' matches the register's own notice that the company holds only a Category 5 licence. The claimed number 20200000078 is not displayed on the public record page (the register's own record identifier is CP-0000953), so the number could not be confirmed against the register display. Observable relationship relevant to the crawl context: the register record authorizes Financial Consultations and Introduction only; the register states this licence does not cover derivatives or spot-FX brokerage or order execution."
+ }
+]
