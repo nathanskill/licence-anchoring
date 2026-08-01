@@ -230,6 +230,12 @@ PAGE_TYPE_RULES = [
 ]
 
 
+def stable(counter):
+    """Counter -> dict ordered by count desc then label, so repeated runs of
+    this script produce byte-identical artifacts."""
+    return dict(sorted(counter.items(), key=lambda kv: (-kv[1], kv[0])))
+
+
 def norm_space(s):
     return re.sub(r"\s+", " ", (s or "")).strip()
 
@@ -697,9 +703,11 @@ def main():
         # Page types are counted over DISTINCT pages carrying the unit, not
         # over sentence hits, so the components sum to n_pages.
         u["page_type_counts"] = Counter(page_type(p) for p in u["pages"])
+        # Tie-break on the label so the artifact is byte-identical between
+        # runs; set iteration order over the page set is not stable.
         u["page_types"] = "; ".join(
             f"{t}:{n}" for t, n in sorted(u["page_type_counts"].items(),
-                                          key=lambda kv: -kv[1]))
+                                          key=lambda kv: (-kv[1], kv[0])))
         u["page_type_example"] = page_type(u["example_url"])
 
     os.makedirs(ART, exist_ok=True)
@@ -721,7 +729,7 @@ def main():
         e["page_types"] = "; ".join(
             f"{t}:{n}" for t, n in sorted(
                 Counter(page_type(p) for p in e["pages"]).items(),
-                key=lambda kv: -kv[1]))
+                key=lambda kv: (-kv[1], kv[0])))
     exc = sorted(excluded.values(),
                  key=lambda e: (e["decision"], e["domain"], -e["n_pages"]))
     with open(os.path.join(ART, "excluded_non_self_referential.csv"), "w",
@@ -796,14 +804,14 @@ def main():
         },
         # How many units are carried by at least one page of each type, and
         # how many (unit x distinct page) observations fall in each type.
-        "units_appearing_on_page_type": dict(Counter(
-            t for u in out for t in u["page_type_counts"]).most_common()),
-        "unit_page_observations_by_page_type": dict(sum(
-            (u["page_type_counts"] for u in out), Counter()).most_common()),
-        "complete_units_appearing_on_page_type": dict(Counter(
-            t for u in complete_pre for t in u["page_type_counts"]).most_common()),
-        "distinct_pages_by_page_type": dict(Counter(
-            page_type(r["url"]) for r in rows).most_common()),
+        "units_appearing_on_page_type": stable(Counter(
+            t for u in out for t in u["page_type_counts"])),
+        "unit_page_observations_by_page_type": stable(sum(
+            (u["page_type_counts"] for u in out), Counter())),
+        "complete_units_appearing_on_page_type": stable(Counter(
+            t for u in complete_pre for t in u["page_type_counts"])),
+        "distinct_pages_by_page_type": stable(Counter(
+            page_type(r["url"]) for r in rows)),
         "vague_assertions": len(vagues),
         "domains_with_vague_only": len(
             {v["domain"] for v in vagues} - {u["domain"] for u in out}),

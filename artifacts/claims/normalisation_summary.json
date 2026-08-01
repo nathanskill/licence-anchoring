@@ -78,8 +78,8 @@
   "units_appearing_on_page_type": {
     "editorial": 23,
     "other": 20,
-    "product-or-account": 18,
     "legal-or-corporate": 18,
+    "product-or-account": 18,
     "home": 1
   },
   "unit_page_observations_by_page_type": {
@@ -92,8 +92,8 @@
   "complete_units_appearing_on_page_type": {
     "editorial": 12,
     "legal-or-corporate": 9,
-    "product-or-account": 7,
-    "other": 7
+    "other": 7,
+    "product-or-account": 7
   },
   "distinct_pages_by_page_type": {
     "editorial": 282,
