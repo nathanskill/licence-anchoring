@@ -5,6 +5,24 @@ Corrections to committed frame artifacts. The frozen protocol
 untouched; substantive scope changes are recorded as numbered amendments
 under `protocol/amendments/`.
 
+## 2026-08-01 — separator-less two-URL register field split (Belize)
+
+The Belize FSC register publishes the literal domain-name value
+`www.entrust.bzwww.legalbelize.com` for one licensee: two URLs concatenated
+with no separator, a data-entry error in the source register rather than a
+parse bug. `domains_of()` split only on `;` and `,`, so this would have been
+queried as one invalid hostname, guaranteeing a CDX 404 recorded as zero
+Chinese-language captures — the same bug class as the eurotrader.com
+correction below, where a 0 would have been a lookup failure and not
+evidence of absence.
+
+Fix: a TLD immediately followed by `www.` is treated as a missing separator
+and split there. No valid hostname contains `.bzwww.`, and the rule leaves
+every other field in the frame unchanged (verified against the trailing-`;`,
+comma-separated, bare-host, `http://` and trailing-`/` forms already
+present). The two hosts `entrust.bz` and `legalbelize.com` are probed
+separately. No other register field in F2 is affected.
+
 ## 2026-07-31 — eurotrader.com probe row corrected (bug artifact)
 
 The register's website field for Eurotrade RGB (Seychelles) Ltd reads

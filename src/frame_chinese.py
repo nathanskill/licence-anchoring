@@ -76,8 +76,17 @@ def domains_of(field):
 
     Register fields may hold several URLs separated by ';' or ','; each
     candidate is sanitized and yielded, invalid remainders dropped.
+
+    Some registers concatenate two URLs with no separator at all — the Belize
+    FSC register publishes the literal value "www.entrust.bzwww.legalbelize
+    .com" for one licensee. A TLD immediately followed by "www." is that
+    error and nothing else (no valid hostname contains ".bzwww."), so it is
+    split there. Without this the invalid host guarantees a CDX 404 that
+    would be recorded as absence of Chinese-language captures, which is the
+    same bug class as the eurotrader.com correction in CORRECTIONS.md.
     """
     out = []
+    field = re.sub(r"(\.[a-z]{2,6})(?=www\.)", r"\1;", field or "", flags=re.I)
     for part in re.split(r"[;,]", field or ""):
         d = domain_of(part)
         if d and "." in d and d not in out:
