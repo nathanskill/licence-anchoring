@@ -1,0 +1,23 @@
+domain,decision,reason,kind,authority_detected,identifier_detected,n_pages,n_hits,page_types,sentence,example_url
+darwinex.com,exclude,generic-class-subject,regulated_cn,FCA,,1,1,product-or-account:1,受 FCA 和 CNMV 监管的经纪商,https://www.darwinex.com/zh/invest/JTL
+fxcentrum.com,exclude,definition,regulated_cn,,,2,2,editorial:1; other:1,KYC验证是经纪商用来确认您的身份并保护账户免受欺诈、洗钱和未经授权提款的流程,https://zh-cn.fxcentrum.com/%E4%BA%A4%E6%98%93%E6%95%99%E8%82%B2/
+fxcentrum.com,exclude,question,regulated_cn,,,1,1,other:1,FXCENTRUM 是否受到任何形式的监管/许可？,https://zh-cn.fxcentrum.com/%E5%B8%B8%E9%97%AE%E9%97%AE%E9%A2%98/
+fxcentrum.com,exclude,reader-advice,regulated_cn,,,1,1,editorial:1,寻找一个受值得信赖的机构监管的机构，以确保您的资金安全,https://zh-cn.fxcentrum.com/forex/%E6%8E%8C%E6%8F%A1%E8%B4%A7%E5%B8%81%E4%BA%A4%E6%98%93%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86-%E5%88%9D%E5%AD%A6%E8%80%85/
+fxcentrum.com,exclude,reader-advice,regulated_cn,FCA,,1,1,editorial:1,提示 1：在为真实账户注资之前，务必核实该平台是否受 FCA 或同等机构监管，以及是否提供 FSCS 或其他保障措施,https://zh-cn.fxcentrum.com/forex/best-trading-platform-in-the-uk/
+fxcentrum.com,exclude,generic-class-subject,regulated_cn,FCA,,1,1,editorial:1,受 FCA 监管的经纪商通常能为英国客户提供更严格的监管和更清晰的纠纷解决途径,https://zh-cn.fxcentrum.com/forex/best-trading-platform-in-the-uk/
+tradequo.com,exclude,question,regulated_cn,,,1,1,legal-or-corporate:1,您是否受任何政府/监管机构监管？,https://tradequo.com/zh/company/faq
+windsorbrokers.com,exclude,question,regulated_cn,,,27,27,editorial:27,温莎经纪国际有限公司受哪个监管机构监管？,https://windsorbrokers.com/zh-hans/knowledge-base/deposits-withdrawals/%E5%A6%82%E4%BD%95%E7%94%A8webmoney%E5%85%A5%E9%87%91%EF%BC%9F/
+windsorbrokers.com,exclude,question,regulated_cn,,,27,27,editorial:27,温莎市场（肯尼亚）有限公司受哪些当局监管？,https://windsorbrokers.com/zh-hans/knowledge-base/deposits-withdrawals/%E5%A6%82%E4%BD%95%E7%94%A8webmoney%E5%85%A5%E9%87%91%EF%BC%9F/
+windsorbrokers.com,exclude,reader-advice,regulated_cn,,,3,3,product-or-account:3,与信誉良好且受多重监管的经纪商合作，确保您的投资安全,https://windsorbrokers.com/zh-hans/products/commodities/
+zfx.com,exclude,negated-regulation,regulated_cn,,,1,1,editorial:1,场外交易大多不受相关政府机构直接监管，让交易双方直接进行磋商而无须公开，亦因如此，在进行交易时可能产生信息不对称、价格不透明的问题，所以成交价与市场公布的出,https://www.zfx.com/zh-hans/academy/%E4%BD%95%E8%B0%93%E5%9C%BA%E5%A4%96%E4%BA%A4%E6%98%93/
+zfx.com,exclude,generic-class-subject,regulated_cn,,,1,1,editorial:1,这个经纪商受到严格监管，并提供许多好处，包括有竞争力的费用、MT4平台和广泛的资产组合,https://www.zfx.com/zh-hans/academy/%E5%A6%82%E4%BD%95%E8%B4%AD%E4%B9%B0%E7%89%B9%E6%96%AF%E6%8B%89%E8%82%A1%E7%A5%A8/
+zfx.com,exclude,reader-advice,regulated_cn,,,1,1,editorial:1,特别的是，您应该检查您的经纪商是否受到合规的监管并提供易于使用和高效的平台,https://www.zfx.com/zh-hans/academy/%E6%90%BA%E7%A8%8B%E8%82%A1%E4%BB%B7/
+zfx.com,exclude,generic-class-subject,regulated_cn,,,1,1,editorial:1,交易平台也是受认证监管的经纪商，无庸置疑的，确实是最适合投资麦当劳股票价格的中介商,https://www.zfx.com/zh-hans/academy/%E9%BA%A6%E5%BD%93%E5%8A%B3%E8%82%A1%E4%BB%B7/
+zfx.com,exclude,anaphoric-third-party,regulated_cn,FCA,,1,1,editorial:1,然而，它的严肃性是不容置疑的，因为它受到英国金融行为监管局的监管,https://www.zfx.com/zh-hans/academy/cac-40%E6%8C%87%E6%95%B0/
+atcbrokers.com,queue,no decisive self-reference signal; manual decision required,regulated_cn,,,1,1,editorial:1,另一方面，尽管 CFD 交易的受欢迎程度近年来大幅飙升，但行业监管仍需迎头赶上,https://atcbrokers.com/cn/learn/learn-to-trade/what-are-cfds/
+darwinex.com,queue,no decisive self-reference signal; manual decision required,regulated_cn,FCA,,1,1,product-or-account:1,受 FCA 和 CNMV 监管,https://www.darwinex.com/zh/invest/JTL
+iux.com,queue,no decisive self-reference signal; manual decision required,regulated_cn,,,1,1,legal-or-corporate:1,您的资金和数据受到强大协议、高级加密和严格监管监督的保护,https://www.iux.com/zh/company/about
+iux.com,queue,no decisive self-reference signal; manual decision required,regulated_cn,,,1,1,editorial:1,外汇市场在许多国家受到政府机构的严格监管,https://www.iux.com/zh/education/article/forex-vs-crypto-trading-which-one-is-right-for-you
+iux.com,queue,no decisive self-reference signal; manual decision required,regulated_cn,,,1,1,editorial:1,而外汇的波动性较低，且受到更严格的监管，因此适合那些希望降低市场崩盘风险的人士,https://www.iux.com/zh/education/article/forex-vs-crypto-trading-which-one-is-right-for-you
+windsorbrokers.com,queue,no decisive self-reference signal; manual decision required,regulated_cn,,,1,1,product-or-account:1,这不适用于受Seldon Investments Limited（约旦）监管的客户,https://windsorbrokers.com/zh-hans/products/indices/
+zfx.com,queue,no decisive self-reference signal; manual decision required,regulated_cn,,,9,9,editorial:9,受FSA监管，荣获 Financial Weekly 2019年 最佳交易平台,https://www.zfx.com/zh-hans/academy/%E5%86%B3%E5%AE%9A%E6%8A%95%E8%B5%84%E6%96%B9%E5%90%91%E5%92%8C%E5%BF%83%E6%80%81/

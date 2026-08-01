@@ -2,30 +2,126 @@
   "source_pages": 413,
   "domains": 22,
   "raw_sentences": 2501,
-  "claim_units": 43,
-  "units_with_authority_and_identifier": 14,
-  "units_authority_only": 9,
-  "vague_assertions": 63,
-  "domains_with_vague_only": 2,
+  "claim_units": 37,
+  "completeness_breakdown": {
+    "authority+identifier": 19,
+    "identifier-no-authority": 14,
+    "identifier-unpaired-same-page": 2,
+    "anchor-no-number": 1,
+    "identifier-truncated-at-extraction": 1
+  },
+  "units_with_authority_and_identifier": 19,
+  "units_anchor_no_number": 1,
+  "units_identifier_unpaired_same_page": 2,
+  "units_identifier_truncated_at_extraction": 1,
+  "units_identifier_no_authority": 14,
+  "units_company_registry_number_in_licence_position": 5,
+  "fragment_units_folded_by_same_sentence_pairing": 0,
+  "bare_identifier_fragments_folded_into_complete_units": 3,
+  "pairing_fix_ablation": {
+    "same_sentence_authority_identifier_pairs_before_fix": 14,
+    "after_identifier_pairing_fix_only": 16,
+    "after_authority_longform_fix_only": 16,
+    "after_both_fixes": 19,
+    "pairs_recovered": [
+      "fusionmarkets.com|FSA-SC|SD|096",
+      "fusionmarkets.com|VFSC|EN-COMPANY|40256",
+      "iux.com|ASIC|AFSL|529610",
+      "tradequo.com|FSA-SC|SD|140",
+      "xs.com|ASIC|AFSL|374409",
+      "xs.com|FSCA|FSP|53199",
+      "xs.com|SCA-AE|CN-LIC|20200000339"
+    ],
+    "pairs_recovered_by_identifier_pairing_fix": [
+      "fusionmarkets.com|VFSC|EN-COMPANY|40256",
+      "iux.com|ASIC|AFSL|529610",
+      "xs.com|ASIC|AFSL|374409",
+      "xs.com|FSCA|FSP|53199"
+    ],
+    "pairs_recovered_by_authority_longform_fix": [
+      "fusionmarkets.com|FSA-SC|SD|096",
+      "tradequo.com|FSA-SC|SD|140"
+    ],
+    "pairs_present_before_and_absent_after": [
+      "iux.com|ASIC|GENERIC|529610",
+      "xs.com|ASIC|GENERIC|ASIC374409"
+    ],
+    "note": "Counted at the sentence level, before fragment merging, so a pair already reachable by merging two fragments still appears here as recovered. The unit-level effect is in units_with_authority_and_identifier."
+  },
+  "self_reference_filter": {
+    "predicating_sentence_hits_tested": 562,
+    "included": 477,
+    "excluded": 70,
+    "queued_for_manual_decision": 15,
+    "exclusion_rate_of_tested": 0.1246,
+    "queue_rate_of_tested": 0.0267,
+    "distinct_excluded_sentences": 15,
+    "distinct_queued_sentences": 7,
+    "excluded_sentence_page_hits": 70,
+    "queued_sentence_page_hits": 15,
+    "unit_bearing_sentences_tested": 397,
+    "unit_bearing_excluded": 4,
+    "unit_bearing_queued": 1,
+    "identifier_tokens_passed_through_untested": 629,
+    "excluded_by_page_type": {
+      "editorial": 63,
+      "product-or-account": 4,
+      "other": 2,
+      "legal-or-corporate": 1
+    },
+    "queued_by_page_type": {
+      "editorial": 12,
+      "product-or-account": 2,
+      "legal-or-corporate": 1
+    }
+  },
+  "units_appearing_on_page_type": {
+    "editorial": 23,
+    "other": 20,
+    "product-or-account": 18,
+    "legal-or-corporate": 18,
+    "home": 1
+  },
+  "unit_page_observations_by_page_type": {
+    "editorial": 578,
+    "other": 116,
+    "product-or-account": 37,
+    "legal-or-corporate": 31,
+    "home": 1
+  },
+  "complete_units_appearing_on_page_type": {
+    "editorial": 12,
+    "legal-or-corporate": 9,
+    "product-or-account": 7,
+    "other": 7
+  },
+  "distinct_pages_by_page_type": {
+    "editorial": 282,
+    "other": 80,
+    "product-or-account": 26,
+    "legal-or-corporate": 23,
+    "home": 2
+  },
+  "vague_assertions": 45,
+  "domains_with_vague_only": 1,
   "domains_with_operative_sentence": 5,
   "operative_candidates": 5,
   "units_per_domain": {
-    "xs.com": 8,
+    "xs.com": 7,
     "m4markets.com": 6,
-    "dbinvesting.com": 4,
+    "dbinvesting.com": 3,
     "fpmarkets.com": 3,
     "fusionmarkets.com": 3,
-    "icmarkets.sc": 3,
-    "iux.com": 3,
     "atcbrokers.com": 2,
     "darwinex.com": 2,
-    "fxcentrum.com": 2,
+    "icmarkets.sc": 2,
+    "iux.com": 2,
     "rock-west.com": 2,
     "blackbull.com": 1,
+    "fxcentrum.com": 1,
     "pepperstone.com": 1,
     "t4trade.com": 1,
-    "tradequo.com": 1,
-    "zfx.com": 1
+    "tradequo.com": 1
   },
-  "note": "Claim units are (domain, authority, identifier scheme, identifier, named entity) tuples deduplicated across pages; n_pages records how many archived pages carried the unit. No A/B/C/D coding is applied here: coding requires register verification and the operative-entity determination (protocol sections 5-6)."
+  "note": "Claim units are (domain, authority, identifier scheme, identifier, named entity) tuples deduplicated across pages; n_pages records how many DISTINCT archived pages carried the unit and n_sentences how many extracted sentence hits produced it. No A/B/C/D coding is applied here: coding requires register verification and the operative-entity determination (protocol sections 5-6). completeness distinguishes four states that an earlier revision conflated into one boolean: an authority paired with an identifier; an authority with no identifier anywhere on the pages carrying it (protocol section 3 sub-code anchor-no-number, a codeable observation and not an extraction failure); an authority whose page carries an identifier in a different sentence; and an authority whose identifier was cut off by the stage-2 extraction window. identifier_kind separates licence numbers from company-registry numbers displayed in a licence-number position. page_type is recorded but never used to exclude a sentence."
 }
