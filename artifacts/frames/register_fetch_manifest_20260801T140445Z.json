@@ -1,0 +1,62 @@
+[
+  {
+    "key": "seychelles_securities_dealers",
+    "url": "https://fsaseychelles.sc/regulated-entities/capital-markets",
+    "jurisdiction": "Seychelles",
+    "regulator": "Seychelles FSA",
+    "status": "ok",
+    "rendering": "html",
+    "bytes": 1041381,
+    "sha256": "40f5243d6281b22a9f1655a50c1a1a94f3ce2c434363c0fc76608ce8d0af4471",
+    "file": "seychelles_securities_dealers_20260801T140445Z.html",
+    "fetched_utc": "20260801T140445Z"
+  },
+  {
+    "key": "vanuatu_financial_dealers",
+    "url": "https://www.vfsc.vu/financial-dealers-licensee-list/",
+    "jurisdiction": "Vanuatu",
+    "regulator": "Vanuatu FSC",
+    "status": "ok",
+    "rendering": "html",
+    "bytes": 147092,
+    "sha256": "e3a204c11d893f00fbc8bedd316eebfd36d35b03a497730882212287908957de",
+    "file": "vanuatu_financial_dealers_20260801T140445Z.html",
+    "fetched_utc": "20260801T140445Z"
+  },
+  {
+    "key": "belize_fsc_licensees",
+    "url": "https://licensys.belizefsc.org.bz/api/pub/DynamicList?__meta__formId=6928049e24c807681185b908&Page=1&PageSize=500&SortBy=RegistrationObjectInfo.InitialRegistrationDate%20desc&IsCurrent=true",
+    "jurisdiction": "Belize",
+    "regulator": "Belize FSC",
+    "status": "ok",
+    "rendering": "json",
+    "bytes": 76992,
+    "sha256": "396af7835f06ab5bce53aed4510dc7d5ab02a67b0739694a3276ef61c6eb3ed7",
+    "file": "belize_fsc_licensees_20260801T140445Z.json",
+    "fetched_utc": "20260801T140445Z"
+  },
+  {
+    "key": "svg_mutual_funds",
+    "url": "https://fsasvg.com/docs/mutual-funds/",
+    "jurisdiction": "SVG",
+    "regulator": "SVG FSA",
+    "status": "ok",
+    "rendering": "html",
+    "bytes": 491264,
+    "sha256": "4fe8720376d878cfcb61c3a43b5fc0b56d92dcecadf18d323803cc241c798376",
+    "file": "svg_mutual_funds_20260801T140445Z.html",
+    "fetched_utc": "20260801T140445Z"
+  },
+  {
+    "key": "belize_fsc_licence_types",
+    "url": "https://licensys.belizefsc.org.bz/api/pub/classifiers/selectSearchByTranslation?ClassifierDomainNaturalIds=LMIS-LIC-TYPE&IsValid=true&SortBy=RowOrder%20asc&TranslationLanguage=EN&Page=1&PageSize=200",
+    "jurisdiction": "",
+    "regulator": "(auxiliary lookup)",
+    "status": "ok",
+    "rendering": "json",
+    "bytes": 3948,
+    "sha256": "5d80d764937a91d23c3f6c31341b248f6a329027586957faa87a24cd16ae693d",
+    "file": "belize_fsc_licence_types_20260801T140445Z.json",
+    "fetched_utc": "20260801T140445Z"
+  }
+]
