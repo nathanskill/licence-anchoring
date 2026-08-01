@@ -173,5 +173,11 @@ byte-for-byte from the archives.
 - Rows with a published licence number: **92** (Belize only).
 - Rows with a website, i.e. entity→brand mapping possible at all: **240**
   (166 Seychelles + 74 Belize) — 53% of committed rows.
-- Distinct domains in the frame: **230** (162 previously probed + 68 new,
-  all 68 from Belize).
+- Distinct domains in the frame: **231** — 162 from Seychelles (all already
+  probed), 71 from Belize, of which **2 appear in both registers**: two
+  domains are recorded against a Seychelles registrant *and* against a
+  differently-named Belize licensee. That is an observable register fact,
+  reported here as an entity-relationship observation and nothing more; it
+  is exactly the multi-register structure §5 of the protocol tells the
+  operative-entity rule to resolve. Derivable from the frame CSV by grouping
+  on `website`. Net new domains to probe: **69**.

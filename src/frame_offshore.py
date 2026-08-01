@@ -532,7 +532,9 @@ def cmd_parse():
                 "source_sha256": sha256_bytes(body),
             })
         n_inst = sum(1 for r in rows if r["institutional"])
-        n_site = sum(1 for r in rows if r["website"])
+        # websites counted over COMMITTED rows only, so this line matches the
+        # artifact rather than the wider local parse
+        n_site = sum(1 for r in rows if r["institutional"] and r["website"])
         per_register.append((key, juris, len(rows), n_inst, n_site))
         print(f"{key}: {n_raw} raw entries, {len(rows)} after key dedup "
               f"({n_raw - len(rows)} duplicate keys), {n_inst} institutional, "
