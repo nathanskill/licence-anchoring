@@ -1,6 +1,6 @@
 # Licence Anchoring (REF-2026-019)
 
-Status: `PROTOCOL FROZEN / COLLECTION AND FIRST VERIFICATION COMPLETE / SAMPLE BELOW THE PROTOCOL FLOOR`
+Status: `PROTOCOL FROZEN / COLLECTION AND FIRST VERIFICATION COMPLETE / N=21 VERIFIED UNITS, 35% OF THE PROTOCOL FLOOR — NOT A POPULATION ESTIMATE`
 
 Reached so far: four offshore registers enumerated (450 institutional
 registrants committed), 222 register-listed domains probed against the Common
@@ -8,9 +8,10 @@ Crawl index for Chinese-language presence (26 carry Chinese pages), 413
 archived Chinese-language pages fetched from WARC records, 2,501 licence-claim
 sentences extracted, 37 claim units normalised, and 21 units verified against
 nine official registers. Class tally over those 21 units: A 3, B 12, C 0, D 6.
-That is 35% of the protocol's 60-unit floor, so the tally describes the
-verified units only and is **not** a population estimate — see
-`artifacts/verification_v2/` for the full caveat.
+That is 35.0% of the protocol's 60-unit floor and 26.3% of its 80-unit target,
+so the tally describes the verified units only and is **not** a population
+estimate — the limitation is stated in full below and in
+`artifacts/verification_v2/verification_report.md` §5.
 
 Chinese-speaking retail clients read "regulated by the FCA" on a broker's page and assume someone will step in if things go wrong. Often a different group entity — registered in St Vincent, Vanuatu or the Seychelles — is the one that actually contracts with them and holds their funds. The licence is genuine; it simply does not cover the reader, and they tend to discover this only when they try to claim.
 
@@ -22,7 +23,7 @@ Four regulators have named the pattern — ESMA (2019), the FCA's "halo firms" (
 - **Taxonomy**: A direct-licensed / **B cross-entity licence-borrowing** / C clone-or-fabricated / D unverifiable. Class B is the hypothesised dominant form and is reported strictly as an observable entity relationship, never as fraud.
 - **Method**: keyless throughout — Common Crawl for the corpus frame, offshore securities-dealer registers for the spine, statutory registers for verification. No account is ever opened and no personal data is ever submitted; only publicly displayed terms pages are read.
 - **A methodological note that shaped the design**: at least one brand serves opposite entities on the same Chinese-language path depending on the requester's egress IP. Vantage point is therefore a coded variable, and every brand is collected from at least two vantages — a single-vantage crawler can code the hypothesis backwards.
-- **No results have been produced yet.** Weak or null results will be reported in full when they exist.
+- **First results exist, and the limitation travels with them.** N = 21 verified claim units, coded A 3 / B 12 / C 0 / D 6 — 35.0% of the protocol's 60-unit floor and 26.3% of its 80-unit target. These counts and shares describe the verified units only. They are **not a population estimate** and must not be read as a rate for the sector, for Chinese-language broker pages generally, or for any register's licensee base. The units are not independent — 7 of the 21 come from a single domain and 3 from another, so a unit-level share is partly a function of how many authorities one page happens to display; selection was archive-driven rather than random; and class C's zero count carries no information about C's prevalence, because four of the nine registers used publish no licence numbers at all, structurally preventing the number-level test that most often separates C from B. Weak or null results will continue to be reported in full.
 
 Related repositories by the same author: [pump-and-dump-replication-audit](https://github.com/nathanskill/pump-and-dump-replication-audit) · [alert-burden-audit](https://github.com/nathanskill/alert-burden-audit) · [leaderboard-survivorship](https://github.com/nathanskill/leaderboard-survivorship) · [evidence-separated-trading-screening](https://github.com/nathanskill/evidence-separated-trading-screening)
 
