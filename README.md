@@ -1,6 +1,16 @@
 # Licence Anchoring (REF-2026-019)
 
-Status: `PROTOCOL FROZEN / COLLECTION NOT STARTED / NO RESULTS YET`
+Status: `PROTOCOL FROZEN / COLLECTION AND FIRST VERIFICATION COMPLETE / SAMPLE BELOW THE PROTOCOL FLOOR`
+
+Reached so far: four offshore registers enumerated (450 institutional
+registrants committed), 222 register-listed domains probed against the Common
+Crawl index for Chinese-language presence (26 carry Chinese pages), 413
+archived Chinese-language pages fetched from WARC records, 2,501 licence-claim
+sentences extracted, 37 claim units normalised, and 21 units verified against
+nine official registers. Class tally over those 21 units: A 3, B 12, C 0, D 6.
+That is 35% of the protocol's 60-unit floor, so the tally describes the
+verified units only and is **not** a population estimate — see
+`artifacts/verification_v2/` for the full caveat.
 
 Chinese-speaking retail clients read "regulated by the FCA" on a broker's page and assume someone will step in if things go wrong. Often a different group entity — registered in St Vincent, Vanuatu or the Seychelles — is the one that actually contracts with them and holds their funds. The licence is genuine; it simply does not cover the reader, and they tend to discover this only when they try to claim.
 
