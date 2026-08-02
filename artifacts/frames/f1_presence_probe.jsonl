@@ -1,0 +1,78 @@
+{"domain": "capital.co", "stratum": "Belize", "crawl": "CC-MAIN-2026-25", "n_zho_captures_capped": 0, "n_captures_capped": 0, "sample_zho_urls": []}
+{"domain": "capital.com", "stratum": "Belize", "crawl": "CC-MAIN-2026-25", "n_zho_captures_capped": 200, "n_captures_capped": 1000, "sample_zho_urls": ["https://capital.com/zh-hans/analysis/nasdaq-100-forecast", "https://capital.com/zh-hans/analysis/palantir-stock-forecast", "https://capital.com/zh-hans/analysis/ripple-xrp-price-prediction"]}
+{"domain": "forex.co", "stratum": "Belize", "crawl": "CC-MAIN-2026-25", "n_zho_captures_capped": 0, "n_captures_capped": 1, "sample_zho_urls": []}
+{"domain": "forex.com", "stratum": "Belize", "crawl": "CC-MAIN-2026-25", "n_zho_captures_capped": 0, "n_captures_capped": 4, "sample_zho_urls": []}
+{"domain": "markets.co", "stratum": "Belize", "crawl": "CC-MAIN-2026-25", "n_zho_captures_capped": 0, "n_captures_capped": 0, "sample_zho_urls": []}
+{"domain": "markets.com", "stratum": "Belize", "crawl": "CC-MAIN-2026-25", "n_zho_captures_capped": 200, "n_captures_capped": 1000, "sample_zho_urls": ["https://www.markets.com/zh/", "https://www.markets.com/zh-tw/", "https://www.markets.com/zh-tw/about/cookie-disclosure/"]}
+{"domain": "prime.com", "stratum": "Belize", "crawl": "CC-MAIN-2026-25", "n_zho_captures_capped": 0, "n_captures_capped": 0, "sample_zho_urls": []}
+{"domain": "2prime.com", "stratum": "Seychelles", "crawl": "CC-MAIN-2026-25", "n_zho_captures_capped": 0, "n_captures_capped": 0, "sample_zho_urls": []}
+{"domain": "4markets.com", "stratum": "Seychelles", "crawl": "CC-MAIN-2026-25", "n_zho_captures_capped": 0, "n_captures_capped": 0, "sample_zho_urls": []}
+{"domain": "acg-markets.com", "stratum": "Seychelles", "crawl": "CC-MAIN-2026-25", "n_zho_captures_capped": 0, "n_captures_capped": 0, "sample_zho_urls": []}
+{"domain": "b2prime.com", "stratum": "Seychelles", "crawl": "CC-MAIN-2026-25", "n_zho_captures_capped": 0, "n_captures_capped": 242, "sample_zho_urls": []}
+{"domain": "broker.com", "stratum": "Seychelles", "crawl": "CC-MAIN-2026-25", "n_zho_captures_capped": 0, "n_captures_capped": 0, "sample_zho_urls": []}
+{"domain": "brokers.com", "stratum": "Seychelles", "crawl": "CC-MAIN-2026-25", "n_zho_captures_capped": 0, "n_captures_capped": 0, "sample_zho_urls": []}
+{"domain": "capital.io", "stratum": "Seychelles", "crawl": "CC-MAIN-2026-25", "n_zho_captures_capped": 0, "n_captures_capped": 1, "sample_zho_urls": []}
+{"domain": "cg-markets.com", "stratum": "Seychelles", "crawl": "CC-MAIN-2026-25", "n_zho_captures_capped": 0, "n_captures_capped": "", "sample_zho_urls": []}
+{"domain": "exo-markets.com", "stratum": "Seychelles", "crawl": "CC-MAIN-2026-25", "n_zho_captures_capped": 0, "n_captures_capped": 0, "sample_zho_urls": []}
+{"domain": "fx-edge.com", "stratum": "Seychelles", "crawl": "CC-MAIN-2026-25", "n_zho_captures_capped": 0, "n_captures_capped": 10, "sample_zho_urls": []}
+{"domain": "fx.co", "stratum": "Seychelles", "crawl": "CC-MAIN-2026-25", "n_zho_captures_capped": 0, "n_captures_capped": 0, "sample_zho_urls": []}
+{"domain": "fx.com", "stratum": "Seychelles", "crawl": "CC-MAIN-2026-25", "n_zho_captures_capped": 0, "n_captures_capped": 0, "sample_zho_urls": []}
+{"domain": "fx.gr", "stratum": "Seychelles", "crawl": "CC-MAIN-2026-25", "n_zho_captures_capped": 0, "n_captures_capped": 0, "sample_zho_urls": []}
+{"domain": "invest.co", "stratum": "Seychelles", "crawl": "CC-MAIN-2026-25", "n_zho_captures_capped": 0, "n_captures_capped": 2, "sample_zho_urls": []}
+{"domain": "invest.com", "stratum": "Seychelles", "crawl": "CC-MAIN-2026-25", "n_zho_captures_capped": 0, "n_captures_capped": 0, "sample_zho_urls": []}
+{"domain": "investing.co", "stratum": "Seychelles", "crawl": "CC-MAIN-2026-25", "n_zho_captures_capped": 0, "n_captures_capped": 0, "sample_zho_urls": []}
+{"domain": "m4markets.com", "stratum": "Seychelles", "crawl": "CC-MAIN-2026-25", "n_zho_captures_capped": 60, "n_captures_capped": 595, "sample_zho_urls": ["https://m4markets.com/zh-hans/", "https://m4markets.com/zh-hans/%E4%B8%8E%E4%B8%89%E9%87%8D%E7%9B%91%E7%AE%A1%E7%BB%8F%E7%BA%AA%E5%95%86%E4%BA%A4%E6%98%93%E5%B7%AE%E4%BB%B7%E5%90%88%E7%BA%A6-15/", "https://m4markets.com/zh-hans/%E4%B8%8E%E4%B8%89%E9%87%8D%E7%9B%91%E7%AE%A1%E7%BB%8F%E7%BA%AA%E5%95%86%E4%BA%A4%E6%98%93%E5%B7%AE%E4%BB%B7%E5%90%88%E7%BA%A6-6/"]}
+{"domain": "markets.net", "stratum": "Seychelles", "crawl": "CC-MAIN-2026-25", "n_zho_captures_capped": 0, "n_captures_capped": 0, "sample_zho_urls": []}
+{"domain": "nexo-markets.com", "stratum": "Seychelles", "crawl": "CC-MAIN-2026-25", "n_zho_captures_capped": 0, "n_captures_capped": 0, "sample_zho_urls": []}
+{"domain": "pocket-trader.com", "stratum": "Seychelles", "crawl": "CC-MAIN-2026-25", "n_zho_captures_capped": 0, "n_captures_capped": 0, "sample_zho_urls": []}
+{"domain": "purple-trading.sc", "stratum": "Seychelles", "crawl": "CC-MAIN-2026-25", "n_zho_captures_capped": 0, "n_captures_capped": 10, "sample_zho_urls": []}
+{"domain": "trader.com", "stratum": "Seychelles", "crawl": "CC-MAIN-2026-25", "n_zho_captures_capped": 0, "n_captures_capped": 0, "sample_zho_urls": []}
+{"domain": "trading.com", "stratum": "Seychelles", "crawl": "CC-MAIN-2026-25", "n_zho_captures_capped": 0, "n_captures_capped": 234, "sample_zho_urls": []}
+{"domain": "satay-market.ru", "stratum": "no offshore entity", "crawl": "CC-MAIN-2026-25", "n_zho_captures_capped": 0, "n_captures_capped": 0, "sample_zho_urls": []}
+{"domain": "fbp-capital.pro", "stratum": "no offshore entity", "crawl": "CC-MAIN-2026-25", "n_zho_captures_capped": 0, "n_captures_capped": 0, "sample_zho_urls": []}
+{"domain": "galeon-invest.com", "stratum": "no offshore entity", "crawl": "CC-MAIN-2026-25", "n_zho_captures_capped": 0, "n_captures_capped": 0, "sample_zho_urls": []}
+{"domain": "us-markets.com", "stratum": "no offshore entity", "crawl": "CC-MAIN-2026-25", "n_zho_captures_capped": 0, "n_captures_capped": 0, "sample_zho_urls": []}
+{"domain": "steel-trader.de", "stratum": "no offshore entity", "crawl": "CC-MAIN-2026-25", "n_zho_captures_capped": 0, "n_captures_capped": 0, "sample_zho_urls": []}
+{"domain": "ab-trading.solutions", "stratum": "no offshore entity", "crawl": "CC-MAIN-2026-25", "n_zho_captures_capped": 0, "n_captures_capped": 1, "sample_zho_urls": []}
+{"domain": "nano-prime.pl", "stratum": "no offshore entity", "crawl": "CC-MAIN-2026-25", "n_zho_captures_capped": 0, "n_captures_capped": 0, "sample_zho_urls": []}
+{"domain": "7point2capital.com", "stratum": "no offshore entity", "crawl": "CC-MAIN-2026-25", "n_zho_captures_capped": 0, "n_captures_capped": 0, "sample_zho_urls": []}
+{"domain": "ilearning-forex.info", "stratum": "no offshore entity", "crawl": "CC-MAIN-2026-25", "n_zho_captures_capped": 0, "n_captures_capped": 8, "sample_zho_urls": []}
+{"domain": "a-prime-intl-online-dating.fyi", "stratum": "no offshore entity", "crawl": "CC-MAIN-2026-25", "n_zho_captures_capped": 0, "n_captures_capped": 0, "sample_zho_urls": []}
+{"domain": "bitcoin-invest.cz", "stratum": "no offshore entity", "crawl": "CC-MAIN-2026-25", "n_zho_captures_capped": 0, "n_captures_capped": 0, "sample_zho_urls": []}
+{"domain": "gold-group.gr", "stratum": "no offshore entity", "crawl": "CC-MAIN-2026-25", "n_zho_captures_capped": 0, "n_captures_capped": 0, "sample_zho_urls": []}
+{"domain": "rps-invest.com", "stratum": "no offshore entity", "crawl": "CC-MAIN-2026-25", "n_zho_captures_capped": 0, "n_captures_capped": 0, "sample_zho_urls": []}
+{"domain": "market-shares.com", "stratum": "no offshore entity", "crawl": "CC-MAIN-2026-25", "n_zho_captures_capped": 0, "n_captures_capped": 0, "sample_zho_urls": []}
+{"domain": "17investing.com", "stratum": "no offshore entity", "crawl": "CC-MAIN-2026-25", "n_zho_captures_capped": 0, "n_captures_capped": 0, "sample_zho_urls": []}
+{"domain": "480broker.com", "stratum": "no offshore entity", "crawl": "CC-MAIN-2026-25", "n_zho_captures_capped": 0, "n_captures_capped": 2, "sample_zho_urls": []}
+{"domain": "imran-traders.com", "stratum": "no offshore entity", "crawl": "CC-MAIN-2026-25", "n_zho_captures_capped": 0, "n_captures_capped": 0, "sample_zho_urls": []}
+{"domain": "wh-immobilientreuhand.com", "stratum": "no offshore entity", "crawl": "CC-MAIN-2026-25", "n_zho_captures_capped": 0, "n_captures_capped": 0, "sample_zho_urls": []}
+{"domain": "to-the-capital.su", "stratum": "no offshore entity", "crawl": "CC-MAIN-2026-25", "n_zho_captures_capped": 0, "n_captures_capped": 0, "sample_zho_urls": []}
+{"domain": "encore-invest.net", "stratum": "no offshore entity", "crawl": "CC-MAIN-2026-25", "n_zho_captures_capped": 0, "n_captures_capped": 0, "sample_zho_urls": []}
+{"domain": "invest-tracing.com", "stratum": "no offshore entity", "crawl": "CC-MAIN-2026-25", "n_zho_captures_capped": 0, "n_captures_capped": 4, "sample_zho_urls": []}
+{"domain": "stroy-invest-market.store", "stratum": "no offshore entity", "crawl": "CC-MAIN-2026-25", "n_zho_captures_capped": 0, "n_captures_capped": 0, "sample_zho_urls": []}
+{"domain": "prime-juku.net", "stratum": "no offshore entity", "crawl": "CC-MAIN-2026-25", "n_zho_captures_capped": 0, "n_captures_capped": 0, "sample_zho_urls": []}
+{"domain": "galior-market.ru", "stratum": "no offshore entity", "crawl": "CC-MAIN-2026-25", "n_zho_captures_capped": 0, "n_captures_capped": 0, "sample_zho_urls": []}
+{"domain": "tabak-market.info", "stratum": "no offshore entity", "crawl": "CC-MAIN-2026-25", "n_zho_captures_capped": 0, "n_captures_capped": 0, "sample_zho_urls": []}
+{"domain": "fx8clihdzghxu.com", "stratum": "no offshore entity", "crawl": "CC-MAIN-2026-25", "n_zho_captures_capped": 0, "n_captures_capped": 0, "sample_zho_urls": []}
+{"domain": "broker-buds.com", "stratum": "no offshore entity", "crawl": "CC-MAIN-2026-25", "n_zho_captures_capped": 0, "n_captures_capped": 0, "sample_zho_urls": []}
+{"domain": "currency-exchange24-7-m.pro", "stratum": "no offshore entity", "crawl": "CC-MAIN-2026-25", "n_zho_captures_capped": 0, "n_captures_capped": 0, "sample_zho_urls": []}
+{"domain": "exchange4u.cz", "stratum": "no offshore entity", "crawl": "CC-MAIN-2026-25", "n_zho_captures_capped": 0, "n_captures_capped": 0, "sample_zho_urls": []}
+{"domain": "cotton-prime.de", "stratum": "no offshore entity", "crawl": "CC-MAIN-2026-25", "n_zho_captures_capped": 0, "n_captures_capped": "", "sample_zho_urls": []}
+{"domain": "market4energy.de", "stratum": "no offshore entity", "crawl": "CC-MAIN-2026-25", "n_zho_captures_capped": 0, "n_captures_capped": 13, "sample_zho_urls": []}
+{"domain": "maryam-market.com", "stratum": "no offshore entity", "crawl": "CC-MAIN-2026-25", "n_zho_captures_capped": 0, "n_captures_capped": 2, "sample_zho_urls": []}
+{"domain": "wp-spread.com", "stratum": "no offshore entity", "crawl": "CC-MAIN-2026-25", "n_zho_captures_capped": 0, "n_captures_capped": 7, "sample_zho_urls": []}
+{"domain": "forma-invest.com", "stratum": "no offshore entity", "crawl": "CC-MAIN-2026-25", "n_zho_captures_capped": 0, "n_captures_capped": 15, "sample_zho_urls": []}
+{"domain": "bts-capital-house.ru", "stratum": "no offshore entity", "crawl": "CC-MAIN-2026-25", "n_zho_captures_capped": 0, "n_captures_capped": 0, "sample_zho_urls": []}
+{"domain": "fx-ea-system-project-lp.com", "stratum": "no offshore entity", "crawl": "CC-MAIN-2026-25", "n_zho_captures_capped": 0, "n_captures_capped": 0, "sample_zho_urls": []}
+{"domain": "tradex-markets.com", "stratum": "no offshore entity", "crawl": "CC-MAIN-2026-25", "n_zho_captures_capped": 0, "n_captures_capped": 0, "sample_zho_urls": []}
+{"domain": "fischers-gold.de", "stratum": "no offshore entity", "crawl": "CC-MAIN-2026-25", "n_zho_captures_capped": 0, "n_captures_capped": 493, "sample_zho_urls": []}
+{"domain": "360markets.com", "stratum": "no offshore entity", "crawl": "CC-MAIN-2026-25", "n_zho_captures_capped": 0, "n_captures_capped": 0, "sample_zho_urls": []}
+{"domain": "geld4gold.org", "stratum": "no offshore entity", "crawl": "CC-MAIN-2026-25", "n_zho_captures_capped": 0, "n_captures_capped": 0, "sample_zho_urls": []}
+{"domain": "belcanto-capital.com", "stratum": "no offshore entity", "crawl": "CC-MAIN-2026-25", "n_zho_captures_capped": 0, "n_captures_capped": "", "sample_zho_urls": []}
+{"domain": "ema-fx.jp", "stratum": "no offshore entity", "crawl": "CC-MAIN-2026-25", "n_zho_captures_capped": 0, "n_captures_capped": "", "sample_zho_urls": []}
+{"domain": "capital-immobilier.fr", "stratum": "no offshore entity", "crawl": "CC-MAIN-2026-25", "n_zho_captures_capped": 0, "n_captures_capped": 3, "sample_zho_urls": []}
+{"domain": "scientific-exchange.com", "stratum": "no offshore entity", "crawl": "CC-MAIN-2026-25", "n_zho_captures_capped": 0, "n_captures_capped": 0, "sample_zho_urls": []}
+{"domain": "cs-cart-pro-market.store", "stratum": "no offshore entity", "crawl": "CC-MAIN-2026-25", "n_zho_captures_capped": 0, "n_captures_capped": 0, "sample_zho_urls": []}
+{"domain": "td-prime.ru", "stratum": "no offshore entity", "crawl": "CC-MAIN-2026-25", "n_zho_captures_capped": 0, "n_captures_capped": 0, "sample_zho_urls": []}
+{"domain": "a-prime-yelloweyecare-12134.xyz", "stratum": "no offshore entity", "crawl": "CC-MAIN-2026-25", "n_zho_captures_capped": 0, "n_captures_capped": 0, "sample_zho_urls": []}
+{"domain": "blockchain-capital.com", "stratum": "no offshore entity", "crawl": "CC-MAIN-2026-25", "n_zho_captures_capped": 0, "n_captures_capped": "", "sample_zho_urls": []}
