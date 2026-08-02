@@ -1,0 +1,40 @@
+{
+  "afs_lic_202607.csv": {
+    "sha256": "3876269ab13fd2a4f1424b242a7e617976cad348e109a65034f198e47309ca58",
+    "bytes": 10419754,
+    "header": [
+      "REGISTER_NAME",
+      "AFS_LIC_NUM",
+      "AFS_LIC_NAME",
+      "AFS_LIC_ABN_ACN",
+      "AFS_LIC_START_DT",
+      "AFS_LIC_PRE_FSR",
+      "AFS_LIC_ADD_LOCAL",
+      "AFS_LIC_ADD_STATE",
+      "AFS_LIC_ADD_PCODE",
+      "AFS_LIC_ADD_COUNTRY",
+      "AFS_LIC_LAT",
+      "AFS_LIC_LNG",
+      "AFS_LIC_CONDITION"
+    ],
+    "n_columns": 13,
+    "n_data_rows": 6525,
+    "website_column_present": false
+  },
+  "afs_lic_202607.tsv": {
+    "sha256": "41d30243cbb20edd62c05874bc77810383b166dbefb94b7b46ed0b136ce272dc",
+    "bytes": 10253918
+  },
+  "afs_lic_202607.xlsx": {
+    "sha256": "23ba992fb03fb9ef3cc4f6b461f3738900d96307be3806f1f9affdbb93d6cc63",
+    "bytes": 775901
+  },
+  "source": {
+    "dataset": "asic-afs-licensee",
+    "portal": "https://data.gov.au/data/dataset/asic-afs-licensee",
+    "csv_url": "https://data.gov.au/data/dataset/ab7eddce-84df-4098-bc8f-500d0d9776d1/resource/d98a113d-6b50-40e6-b65f-2612efc877f4/download/afs_lic_202607.csv",
+    "resource_last_modified": "2026-07-29T23:25:35.022263",
+    "downloaded": "2026-08-02",
+    "licence": "Creative Commons Attribution 3.0 Australia"
+  }
+}

@@ -1,0 +1,6 @@
+ASIC Professional Registers Search — free-text search
+Search screen: https://service.asic.gov.au/search/ (search state is not URL-addressable)
+Captured (UTC): 2026-08-02T06:5x
+Query typed into 'Enter name, licence number, registration number, ACN or ABN': fusionmarkets.com.au
+Search result section: No results found.
+Page data-currency banner: 'The Professional Registers Search displays the latest information for Australian financial services licensees. For all other registers, information displayed is current as of 5:00 AM AEST 02 August 2026'

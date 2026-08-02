@@ -1,0 +1,68 @@
+{
+  "prs_dom_374409.txt": {
+    "source_url": "https://service.asic.gov.au/search/EntityDetail?LicenceNumber=374409&PermissionType=Australian%20financial%20services%20licensees&licenceName=XS%20PRIME%20LTD",
+    "captured_utc": "2026-08-02T06:53:00.522Z",
+    "capture_method": "rendered DOM body.innerText (register is a client-rendered SPA)",
+    "browser_dom_innertext_sha256": "4b9418ea94cce0d023fc3c60192217177d55053887e0e7c90751cb1d62ec2d3e",
+    "browser_dom_innertext_len": 1946,
+    "browser_dom_outerhtml_sha256": "f0a8d8543ad89cd644fca1c1719c0bb94ba2b573a16fea0c160e89e1f04c67b1",
+    "browser_dom_outerhtml_len": 95872,
+    "archive_file_sha256": "4b9418ea94cce0d023fc3c60192217177d55053887e0e7c90751cb1d62ec2d3e",
+    "archive_file_len": 1946,
+    "transcription_exact": true
+  },
+  "prs_dom_529610.txt": {
+    "source_url": "https://service.asic.gov.au/search/EntityDetail?LicenceNumber=529610&PermissionType=Australian%20financial%20services%20licensees&licenceName=IUX%20MARKETS%20AU%20PTY%20LTD.",
+    "captured_utc": "2026-08-02T06:53:24.886Z",
+    "capture_method": "rendered DOM body.innerText (register is a client-rendered SPA)",
+    "browser_dom_innertext_sha256": "1e8b2012058cca8870415e67f4504388c2d0e7352b172976b53323fe2cf2163c",
+    "browser_dom_innertext_len": 1947,
+    "browser_dom_outerhtml_sha256": "1fb132a5120b37d61694689dba5ae6a6ff51651a2f5b2fb4441a11742e0466e7",
+    "browser_dom_outerhtml_len": 81919,
+    "archive_file_sha256": "1e8b2012058cca8870415e67f4504388c2d0e7352b172976b53323fe2cf2163c",
+    "archive_file_len": 1947,
+    "transcription_exact": true
+  },
+  "prs_dom_385620.txt": {
+    "source_url": "https://service.asic.gov.au/search/EntityDetail?LicenceNumber=385620&PermissionType=Australian%20financial%20services%20licensees&licenceName=FMGP%20TRADING%20GROUP%20PTY%20LTD",
+    "captured_utc": "2026-08-02T06:54:02.882Z",
+    "capture_method": "rendered DOM body.innerText (register is a client-rendered SPA)",
+    "browser_dom_innertext_sha256": "6c7a8b143830eae4c02ddb825281c1f2618af3fa3027162854ad3f6117714743",
+    "browser_dom_innertext_len": 2065,
+    "browser_dom_outerhtml_sha256": "7633f21d9a1672116b8b2c649cf4ee583834c7e4b72dc6ae0389849945979647",
+    "browser_dom_outerhtml_len": 139467,
+    "archive_file_sha256": "6c7a8b143830eae4c02ddb825281c1f2618af3fa3027162854ad3f6117714743",
+    "archive_file_len": 2065,
+    "transcription_exact": true
+  },
+  "prs_dom_286354.txt": {
+    "source_url": "https://service.asic.gov.au/search/EntityDetail?LicenceNumber=286354&PermissionType=Australian%20financial%20services%20licensees&licenceName=FIRST%20PRUDENTIAL%20MARKETS%20PTY%20LTD",
+    "captured_utc": "2026-08-02T06:54:29.890Z",
+    "capture_method": "rendered DOM body.innerText (register is a client-rendered SPA)",
+    "browser_dom_innertext_sha256": "eff04eafe5654c1030aa39623b9f2fec34dc1231ba9e11ba1446b3d3d652dc85",
+    "browser_dom_innertext_len": 1977,
+    "browser_dom_outerhtml_sha256": "0f6a266f46a30f90e31f4062080282c7fc6fd3873fe648d5c3547af1ec95fdd3",
+    "browser_dom_outerhtml_len": 102633,
+    "archive_file_sha256": "eff04eafe5654c1030aa39623b9f2fec34dc1231ba9e11ba1446b3d3d652dc85",
+    "archive_file_len": 1977,
+    "transcription_exact": true
+  },
+  "prs_search_fp_markets.txt": {
+    "source_url": "https://service.asic.gov.au/search/",
+    "captured_utc": "2026-08-02",
+    "capture_method": "rendered DOM text of search result section",
+    "query": "FP Markets",
+    "result": "No results found.",
+    "archive_file_sha256": "33b2f5a30533591fbaa8594be72c9c7836c3a1e501ea3da0d940fcb9d77af09a",
+    "archive_file_len": 540
+  },
+  "prs_search_domain_fusionmarkets_com_au.txt": {
+    "source_url": "https://service.asic.gov.au/search/",
+    "captured_utc": "2026-08-02",
+    "capture_method": "rendered DOM text of search result section",
+    "query": "fusionmarkets.com.au",
+    "result": "No results found.",
+    "archive_file_sha256": "ff4583c1188c2e657bebe4702dde57f97b48d565cb1a76cb15d019a078b25f07",
+    "archive_file_len": 550
+  }
+}

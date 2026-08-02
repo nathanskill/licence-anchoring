@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <script type='text/javascript'>window.OutSystemsApp = { basePath: '/search/' };</script>
+        
+        
+        <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1" />
+<script type="text/javascript">
+(function () {
+    function appendMetaTagAttributes(metaTag, attribute, values) {
+        var elem = document.querySelector("meta[name=" + metaTag + "]");
+
+        if (elem) {
+            var attrContent = elem.getAttribute(attribute);
+            elem.setAttribute(attribute, (attrContent ? attrContent + "," : "") + values.join(","));
+        }
+    }
+
+    if (navigator && /OutSystemsApp/i.test(navigator.userAgent)) {
+        // If this app is running on the native shell, we want to disable the zoom
+        appendMetaTagAttributes("viewport", "content", ["user-scalable=no", "minimum-scale=1.0"]);
+    }
+})();</script>
+
+        <script type="text/javascript" src="scripts/OutSystemsManifestLoader.js?3F3fZzzNKkqKoP2DsjtxFw"></script>
+<script type="text/javascript" src="scripts/OutSystems.js?5X3ZVRM+Rn2sb_x7+4GgkQ"></script>
+<script type="text/javascript" src="scripts/OutSystemsReactView.js?R_uIiLqTMowvFHC3czQEiA"></script>
+<script type="text/javascript" src="scripts/Debugger.js?lad8MjHEaUzGWBnXOSdlxQ"></script>
+<script type="text/javascript" src="scripts/Search.appDefinition.js?VSCnKt0Vp2UoLBywfrk_8w"></script>
+<script type="text/javascript" src="scripts/OutSystemsReactWidgets.js?SURSHoK3iOqvdQXBFeIl9g"></script>
+<link type="text/css" rel="stylesheet" href="css/_Basic.css?EqGzAe81QbZLXJyfY3oLwA"></link>
+
+        <script type="text/javascript">OSManifestLoader.indexVersionToken = "wBCx0sJWsZ6HHIuWDSqTpQ";
+</script>
+    </head>
+    <body>
+        <div id="reactContainer"></div>
+        <noscript><span>JavaScript is required</span></noscript>
+
+        <script type="text/javascript" src="scripts/Search.index.js?uQgTxQY8ZcbtuDRlT3+RtQ"></script>
+
+    </body>
+</html>

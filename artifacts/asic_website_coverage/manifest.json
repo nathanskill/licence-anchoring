@@ -1,0 +1,172 @@
+{
+  "artifact": "artifacts/asic_website_coverage",
+  "analysis": "ASIC AFS-licensee website-address coverage audit (secondary analysis added by amendment 5 §3)",
+  "study": "REF-2026-019, locked_protocol_v1.0.md",
+  "check_date": "2026-08-02",
+  "retrieval_environment": "Sydney, AU; requests at human speed, single pass per resource; no volume crawling",
+  "note_on_uncommitted_files": "afs_lic_202607.{csv,tsv,xlsx} (21 MB total) are archived locally and fingerprinted in afs_lic_202607_fingerprint.json rather than committed; they are re-downloadable from the URLs recorded there and their sha256 values pin the exact snapshot parsed.",
+  "files": [
+    {
+      "file": "raw/afs_lic_202607_fingerprint.json",
+      "sha256": "b5a5d1ecdc051ca31863163eedbeb9eb937631c708af427a6290fcfcbaff9396",
+      "bytes": 1269,
+      "source_url": "(derived)",
+      "retrieval": "local",
+      "what_it_is": "sha256/size/header/row-count fingerprint of the three bulk AFS licensee files (files themselves not committed: 21 MB)",
+      "check_date": "2026-08-02"
+    },
+    {
+      "file": "raw/afs_website_addresses_portal.html",
+      "sha256": "580f4c07fefff2ce9199d7cc3426d321a8273a96808b807079262a92d645b9f4",
+      "bytes": 100181,
+      "source_url": "https://www.asic.gov.au/for-finance-professionals/afs-licensees/changing-details-and-lodging-afs-forms/afs-licensees-providing-and-updating-website-addresses-through-the-regulatory-portal/",
+      "retrieval": "HTTP GET, curl",
+      "what_it_is": "ASIC guidance + FAQ for AFS licensees supplying website addresses (dates, voluntariness, scope, promised data.gov.au list)",
+      "check_date": "2026-08-02"
+    },
+    {
+      "file": "raw/asic_data_gov_au.html",
+      "sha256": "2ea9d9f7c8c26610a45307676a173a43cb5ff9940ac845b628306a5791ee1aa0",
+      "bytes": 72590,
+      "source_url": "https://www.asic.gov.au/online-services/search-asic-registers/data-gov-au/",
+      "retrieval": "HTTP GET, curl",
+      "what_it_is": "ASIC published-data page: which registers are available on data.gov.au",
+      "check_date": "2026-08-02"
+    },
+    {
+      "file": "raw/dgau_org_asic.json",
+      "sha256": "040af3af8cea854a53b64f59e72b906d1a63fb1388b61db58a068959ac2e6db0",
+      "bytes": 243,
+      "source_url": "https://data.gov.au/data/api/3/action/package_search?fq=organization:asic&rows=100",
+      "retrieval": "HTTP GET, CKAN API",
+      "what_it_is": "negative control: wrong org slug returns count 0",
+      "check_date": "2026-08-02"
+    },
+    {
+      "file": "raw/dgau_org_asic2.json",
+      "sha256": "38492b052213810e39aebd3d3cef6248cb6fb39e8ed510ac6688a78396b31572",
+      "bytes": 17897,
+      "source_url": "https://data.gov.au/data/api/3/action/organization_show?id=australian-securities-and-investments-commission&include_datasets=true",
+      "retrieval": "HTTP GET, CKAN API",
+      "what_it_is": "organization_show probe (non-JSON error body retained as received)",
+      "check_date": "2026-08-02"
+    },
+    {
+      "file": "raw/dgau_org_asic_all.json",
+      "sha256": "893ed066efcfbc42709b5c827f8492334587154e5d479a3b16ec587d0d45c3c7",
+      "bytes": 118858,
+      "source_url": "https://data.gov.au/data/api/3/action/package_search?fq=organization:australian-securities-and-investments-commission-asic&rows=100",
+      "retrieval": "HTTP GET, CKAN API",
+      "what_it_is": "all 12 ASIC datasets on data.gov.au with their resources",
+      "check_date": "2026-08-02"
+    },
+    {
+      "file": "raw/dgau_pkg_asic_afs_licensee.json",
+      "sha256": "bcc535a0b9c1dccc07f1a8a9b676e570416eb15b9e9174f41872d8e410111f65",
+      "bytes": 11534,
+      "source_url": "https://data.gov.au/data/api/3/action/package_show?id=asic-afs-licensee",
+      "retrieval": "HTTP GET, CKAN API",
+      "what_it_is": "ASIC AFS Licensee dataset metadata: documented field list and resource URLs",
+      "check_date": "2026-08-02"
+    },
+    {
+      "file": "raw/dgau_q_afs.json",
+      "sha256": "ceac51aa86d489cb7ff5d4bec2fe5651ea8cd0727393384520eed939af4574d6",
+      "bytes": 44039,
+      "source_url": "https://data.gov.au/data/api/3/action/package_search?q=%22AFS%20licensee%22&rows=50",
+      "retrieval": "HTTP GET, CKAN API",
+      "what_it_is": "data.gov.au dataset search for \"AFS licensee\"",
+      "check_date": "2026-08-02"
+    },
+    {
+      "file": "raw/mr_26-122mr.html",
+      "sha256": "959c08c10ee63b6028838483348953044d75aa7a7ad645a8f0d279f3f80268ae",
+      "bytes": 23875,
+      "source_url": "https://www.asic.gov.au/about-asic/news-centre/find-a-media-release/2026-releases/26-122mr-asic-helps-strengthen-the-fight-against-imposter-scams-in-financial-services/",
+      "retrieval": "HTTP GET, curl",
+      "what_it_is": "ASIC media release 26-122MR, published 17 June 2026 — the premise document",
+      "check_date": "2026-08-02"
+    },
+    {
+      "file": "raw/prs_374409.html",
+      "sha256": "5309fba10f24cebab0b33fc62a25f228adf1b89e30402c8a16b9584e9b68789f",
+      "bytes": 2217,
+      "source_url": "https://service.asic.gov.au/search/EntityDetail?LicenceNumber=374409&PermissionType=Australian%20financial%20services%20licensees&licenceName=XS%20PRIME%20LTD",
+      "retrieval": "HTTP GET, curl",
+      "what_it_is": "evidence that the Professional Registers Search is a client-rendered SPA: the HTTP body is a 2,217-byte shell with no register data",
+      "check_date": "2026-08-02"
+    },
+    {
+      "file": "raw/prs_dom_286354.txt",
+      "sha256": "eff04eafe5654c1030aa39623b9f2fec34dc1231ba9e11ba1446b3d3d652dc85",
+      "bytes": 1977,
+      "source_url": "https://service.asic.gov.au/search/EntityDetail?LicenceNumber=286354&PermissionType=Australian%20financial%20services%20licensees&licenceName=FIRST%20PRUDENTIAL%20MARKETS%20PTY%20LTD",
+      "retrieval": "rendered DOM body.innerText (register is a client-rendered SPA)",
+      "what_it_is": "per-licensee register record capture",
+      "check_date": "2026-08-02"
+    },
+    {
+      "file": "raw/prs_dom_374409.txt",
+      "sha256": "4b9418ea94cce0d023fc3c60192217177d55053887e0e7c90751cb1d62ec2d3e",
+      "bytes": 1946,
+      "source_url": "https://service.asic.gov.au/search/EntityDetail?LicenceNumber=374409&PermissionType=Australian%20financial%20services%20licensees&licenceName=XS%20PRIME%20LTD",
+      "retrieval": "rendered DOM body.innerText (register is a client-rendered SPA)",
+      "what_it_is": "per-licensee register record capture",
+      "check_date": "2026-08-02"
+    },
+    {
+      "file": "raw/prs_dom_385620.txt",
+      "sha256": "6c7a8b143830eae4c02ddb825281c1f2618af3fa3027162854ad3f6117714743",
+      "bytes": 2065,
+      "source_url": "https://service.asic.gov.au/search/EntityDetail?LicenceNumber=385620&PermissionType=Australian%20financial%20services%20licensees&licenceName=FMGP%20TRADING%20GROUP%20PTY%20LTD",
+      "retrieval": "rendered DOM body.innerText (register is a client-rendered SPA)",
+      "what_it_is": "per-licensee register record capture",
+      "check_date": "2026-08-02"
+    },
+    {
+      "file": "raw/prs_dom_529610.txt",
+      "sha256": "1e8b2012058cca8870415e67f4504388c2d0e7352b172976b53323fe2cf2163c",
+      "bytes": 1947,
+      "source_url": "https://service.asic.gov.au/search/EntityDetail?LicenceNumber=529610&PermissionType=Australian%20financial%20services%20licensees&licenceName=IUX%20MARKETS%20AU%20PTY%20LTD.",
+      "retrieval": "rendered DOM body.innerText (register is a client-rendered SPA)",
+      "what_it_is": "per-licensee register record capture",
+      "check_date": "2026-08-02"
+    },
+    {
+      "file": "raw/prs_dom_captures_index.json",
+      "sha256": "95e82da91949c86c930455774a5e19516a0a6282b06239cf0adc03b307059145",
+      "bytes": 4020,
+      "source_url": "(derived)",
+      "retrieval": "local",
+      "what_it_is": "index of the six browser captures with browser-side and archive-side sha256",
+      "check_date": "2026-08-02"
+    },
+    {
+      "file": "raw/prs_screenservice_endpoint_response.html",
+      "sha256": "61938622004bd560e0edf99fe9ec9e85aba4c93cb69d7b0f4339d9eee0ecc5a4",
+      "bytes": 907,
+      "source_url": "https://service.asic.gov.au/search/screenservices/Search/Detail/EntityDetail/DataActionGetEntityDetail",
+      "retrieval": "HTTP POST, curl",
+      "what_it_is": "the register’s internal JSON endpoint returns HTTP 403 to non-browser clients; not circumvented",
+      "check_date": "2026-08-02"
+    },
+    {
+      "file": "raw/prs_search_domain_fusionmarkets_com_au.txt",
+      "sha256": "ff4583c1188c2e657bebe4702dde57f97b48d565cb1a76cb15d019a078b25f07",
+      "bytes": 552,
+      "source_url": "https://service.asic.gov.au/search/",
+      "retrieval": "rendered DOM text of search result section",
+      "what_it_is": "free-text search result capture",
+      "check_date": "2026-08-02"
+    },
+    {
+      "file": "raw/prs_search_fp_markets.txt",
+      "sha256": "33b2f5a30533591fbaa8594be72c9c7836c3a1e501ea3da0d940fcb9d77af09a",
+      "bytes": 542,
+      "source_url": "https://service.asic.gov.au/search/",
+      "retrieval": "rendered DOM text of search result section",
+      "what_it_is": "free-text search result capture",
+      "check_date": "2026-08-02"
+    }
+  ]
+}

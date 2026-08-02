@@ -1,0 +1,194 @@
+{
+  "analysis": "ASIC AFS-licensee website-address coverage audit",
+  "mandate": "protocol/amendments/amendment_5_mismatch_structure_and_evidence_rules.md §3 (secondary analysis, REF-2026-019)",
+  "protocol": "locked_protocol_v1.0.md (language discipline §8; two-step register verification §6)",
+  "check_date": "2026-08-02",
+  "premise_verification": {
+    "status": "VERIFIED against ASIC's own documents; no element of the amendment's premise was wrong",
+    "primary_sources": [
+      {
+        "what": "ASIC media release 26-122MR",
+        "url": "https://www.asic.gov.au/about-asic/news-centre/find-a-media-release/2026-releases/26-122mr-asic-helps-strengthen-the-fight-against-imposter-scams-in-financial-services/",
+        "published": "17 June 2026",
+        "checked": "2026-08-02",
+        "archive": "raw/mr_26-122mr.html"
+      },
+      {
+        "what": "ASIC, AFS licensees: Providing and updating website addresses through the Regulatory Portal",
+        "url": "https://www.asic.gov.au/for-finance-professionals/afs-licensees/changing-details-and-lodging-afs-forms/afs-licensees-providing-and-updating-website-addresses-through-the-regulatory-portal/",
+        "checked": "2026-08-02",
+        "archive": "raw/afs_website_addresses_portal.html"
+      }
+    ],
+    "checked_elements": {
+      "release_date": {
+        "claimed": "17 June 2026",
+        "found": "Published 17 June 2026",
+        "verdict": "confirmed"
+      },
+      "what_is_collected": {
+        "claimed": "AFS licensees' website addresses added to the professional registers",
+        "found": "ASIC is collecting and publishing website addresses of AFS licensees on its Professional Registers Search (PRS)",
+        "verdict": "confirmed"
+      },
+      "collection_opened": {
+        "claimed": "4 May 2026",
+        "found": "media release says 'since launching in early May'; the AFS licensee page states 'From 4 May 2026, ASIC will begin to collect AFS licensee website addresses' and 'ASIC will start collecting website addresses from 4 May 2026'",
+        "verdict": "confirmed (exact date is on the guidance page, not the media release)"
+      },
+      "publication_from": {
+        "claimed": "June 2026",
+        "found": "'commenced displaying the website addresses on the PRS from June 2026'",
+        "verdict": "confirmed"
+      },
+      "licensees_invited": {
+        "claimed": "over 6,500",
+        "found": "'more than 6,500 AFS licensees invited to provide their website details since launching in early May'",
+        "verdict": "confirmed; independently corroborated by the data.gov.au AFS Licensee snapshot of 2026-07-29, which carries 6,525 AFS Licence rows"
+      },
+      "voluntary": {
+        "claimed": "supply is voluntary",
+        "found": "'ASIC will begin to collect AFS licensee website addresses for all existing AFS licensees via the Regulatory Portal on a voluntary basis'; 'AFS licensees can voluntarily add their website addresses'",
+        "verdict": "confirmed"
+      },
+      "authorised_representatives_out_of_scope": {
+        "claimed": "AR websites excluded",
+        "found": "'Website addresses for authorised representatives are not included in the initiative.' The guidance page adds that the change does not apply to Australian Credit Licensees, authorised representatives, or other non-licensed entities 'at this time'.",
+        "verdict": "confirmed"
+      },
+      "stated_purpose": {
+        "claimed": "includes helping businesses 'including digital and social media platforms' strengthen verification of financial-services advertising",
+        "found": "'It will also support businesses, including digital and social media platforms, to strengthen verification processes for financial services advertising.'",
+        "verdict": "confirmed verbatim"
+      }
+    },
+    "three_additions_the_amendment_did_not_record": [
+      "Voluntariness is expressly conditional: ASIC states it 'may consider using compulsory powers to achieve a complete register, if required'. The amendment treats voluntary supply as a fixed property of the mechanism; on ASIC's own account it is a current setting, not a settled one.",
+      "The published field is tri-state, not binary. ASIC states the PRS shows (a) a principal website and other websites if provided, (b) whether a licensee does not operate a website, and (c) whether a licensee has not yet supplied addresses. Coverage therefore has three cells, and 'no website shown' is not by itself evidence of non-participation.",
+      "ASIC's own FAQ promises a bulk route: 'Data will be available to download as a list via the Australian government's data.gov.au.' As at 2026-08-02 the website field is not in that dataset (see machine_readability)."
+    ],
+    "evidence_rules": {
+      "amendment_5_4_1_future_dated": "satisfied — the media release is dated 17 June 2026, before the 2 August 2026 retrieval date",
+      "amendment_5_4_2_trade_press": "satisfied — the amendment was drafted from a secondary report; every element above was re-checked against ASIC's own pages and no trade-press characterisation is relied on"
+    }
+  },
+  "machine_readability": {
+    "bulk_source_exists": false,
+    "professional_registers_search": {
+      "url": "https://service.asic.gov.au/search/",
+      "form": "per-licensee lookup only",
+      "fields_observed": [
+        "Principal website (summary)",
+        "Websites section with 'Principal website' and 'Other websites' (present only where more than the principal website is held)"
+      ],
+      "rendering": "client-rendered single-page application; the HTTP response body is a 2,217-byte shell containing no register data (raw/prs_374409.html)",
+      "internal_json_endpoint": "POST /search/screenservices/Search/Detail/EntityDetail/DataActionGetEntityDetail returns a structured Website object {HasWebsite, PrincipalWebsiteUrl, WebsiteUrlSummary}; it returns HTTP 403 to non-browser clients (raw/prs_screenservice_endpoint_response.html) and was not circumvented",
+      "search_protection": "the free-text search is reCAPTCHA-protected",
+      "website_field_is_searchable": false,
+      "website_field_searchability_test": "Searching the exact string the register publishes as AFSL 385620's principal website — 'fusionmarkets.com.au' — returns 'No results found.' The search accepts name, licence number, registration number, ACN or ABN. Reverse lookup from a domain to a licensee is therefore not supported."
+    },
+    "data_gov_au": {
+      "asic_datasets_total": 12,
+      "relevant_dataset": "asic-afs-licensee (ASIC - Australian Financial Services Licensee Dataset), updated weekly",
+      "snapshot_parsed": "afs_lic_202607.csv, resource last_modified 2026-07-29T23:25:35Z, sha256 3876269ab13fd2a4f1424b242a7e617976cad348e109a65034f198e47309ca58",
+      "columns": 13,
+      "column_names": [
+        "REGISTER_NAME",
+        "AFS_LIC_NUM",
+        "AFS_LIC_NAME",
+        "AFS_LIC_ABN_ACN",
+        "AFS_LIC_START_DT",
+        "AFS_LIC_PRE_FSR",
+        "AFS_LIC_ADD_LOCAL",
+        "AFS_LIC_ADD_STATE",
+        "AFS_LIC_ADD_PCODE",
+        "AFS_LIC_ADD_COUNTRY",
+        "AFS_LIC_LAT",
+        "AFS_LIC_LNG",
+        "AFS_LIC_CONDITION"
+      ],
+      "data_rows": 6525,
+      "website_column_present": false,
+      "same_for_tsv_and_xlsx": true,
+      "dataset_documented_field_list_mentions_website": false
+    },
+    "conclusion": "No bulk or downloadable form of the website field exists as at 2026-08-02. What is machine-readable: the AFS licensee register minus the website field (weekly CSV/TSV/XLSX on data.gov.au, 6,525 rows). What is not machine-readable: the website field itself, which is available only through per-licensee lookup on a client-rendered, reCAPTCHA-protected search application whose underlying JSON endpoint refuses non-browser clients."
+  },
+  "population_coverage_rate": {
+    "computed": null,
+    "status": "NOT OBTAINABLE within this audit's discipline",
+    "why": "The headline number the mechanism's stated purpose calls for — what share of AFS licensees have supplied a website — cannot be computed because the field is not published in any bulk form. Computing it from the register as published would require roughly 6,525 individual lookups against a reCAPTCHA-protected application, which this audit will not perform.",
+    "what_would_be_needed": [
+      "ASIC to add the website columns to the weekly data.gov.au AFS Licensee dataset — three fields would suffice: principal website, other websites, and the supply-status flag distinguishing 'provided', 'does not operate a website' and 'not yet supplied'. ASIC's own FAQ already states this data 'will be available to download as a list via data.gov.au'.",
+      "or a documented public read API for the PRS website field.",
+      "Either route makes the coverage rate a one-line computation against a 6,525-row frame, and makes it recomputable weekly."
+    ]
+  },
+  "unit_level_results": {
+    "asic_units_in_study": 4,
+    "identification": "All claim units in artifacts/verification_v1 and artifacts/verification_v2 whose displayed authority is ASIC. The full set is xs-ASIC-374409, iux-ASIC-529610, fusionmarkets-ASIC-nonumber, fpmarkets-ASIC-nonumber — confirmed by enumerating all 21 verified units.",
+    "distinct_licensee_records_looked_up": 4,
+    "results": {
+      "MATCH": 0,
+      "MISMATCH": 2,
+      "ABSENCE": 1,
+      "NOT-APPLICABLE": 1
+    },
+    "detail": {
+      "MATCH": {
+        "count": 0,
+        "units": [],
+        "meaning": "observation domain appears in the register's website field for the licensee whose licence the page displays"
+      },
+      "MISMATCH": {
+        "count": 2,
+        "units": [
+          "iux-ASIC-529610",
+          "fusionmarkets-ASIC-nonumber"
+        ],
+        "meaning": "the register publishes at least one website for the licensee and the observation domain is not among them"
+      },
+      "ABSENCE": {
+        "count": 1,
+        "units": [
+          "xs-ASIC-374409"
+        ],
+        "meaning": "the register publishes no website for the licensee, so it makes no statement either way about the observation domain"
+      },
+      "NOT-APPLICABLE": {
+        "count": 1,
+        "units": [
+          "fpmarkets-ASIC-nonumber"
+        ],
+        "meaning": "the page displays no AFS licence number and no entity for the ASIC element, so no licensee record exists to compare against"
+      }
+    },
+    "website_supplied_among_records_looked_up": {
+      "supplied": 2,
+      "not_supplied": 2,
+      "records": [
+        "529610 supplied",
+        "385620 supplied",
+        "374409 not supplied",
+        "286354 not supplied (candidate record only)"
+      ]
+    },
+    "note_on_the_class_A_unit": "fusionmarkets-ASIC-nonumber is the one ASIC unit where the licence holder is also the operative entity for the domain (class A in verification_v2). Its observation domain still does not appear in the register's website field, because the register publishes the licensee's .com.au domain and the Chinese-language observation domain is the .com. The same .com/.com.au split appears at iux. This is a property of what the field records — a licensee's own Australian-facing addresses — not a finding about either firm.",
+    "tri_state_limitation": "For both records showing no website, the PRS displays the string 'No website supplied'. Which of ASIC's two published non-supply states applies — 'does not operate a website' or 'has not yet supplied' — is UNVERIFIABLE-TODAY from the rendered field. In the one record where the underlying payload was observable (374409) the HasWebsite flag was empty, which is consistent with 'not yet supplied' but is not asserted as a finding."
+  },
+  "structural_gaps_observed": [
+    {
+      "gap": "voluntary supply",
+      "observation": "Supply is voluntary and ASIC publishes no coverage figure. Two of the four ASIC licensee records this study looked up publish no website. With no bulk field, no one outside ASIC can state the coverage rate, and ASIC has not published one. ASIC states it may consider compulsory powers if required."
+    },
+    {
+      "gap": "authorised representatives out of scope",
+      "observation": "ASIC states that AR websites are not included. This study's own frame shows why that boundary is load-bearing: two of the four ASIC licensee records carry authorised-representative entries, and verification_v2 recorded a second, ceased record for one licensee on the authorised-representatives register. A domain operated under an AR appointment cannot be checked against this field at all."
+    },
+    {
+      "gap": "the field is not searchable by domain",
+      "observation": "Not previously recorded anywhere in this study. The PRS accepts name, licence number, registration number, ACN or ABN; searching a published website string returns no results. The verification the stated purpose describes — someone holding a domain from an advertisement and asking which licensee it belongs to — is a reverse lookup the register does not support. Every check must start from a licensee identity the enquirer already has."
+    }
+  ],
+  "language_discipline": "Every statement above is of the form 'this domain does / does not appear in this register field', with the register URL and the check date. No brand is described as fraudulent, fake, misleading or a scam. No inference of unlicensed operation is drawn and Corporations Act s911A is not cited (amendment 5 §2). Absence from a register field is recorded as a register-content observation, never as a finding about a firm."
+}
