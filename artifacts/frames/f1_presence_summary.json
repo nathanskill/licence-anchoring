@@ -1,0 +1,38 @@
+{
+  "crawl": "CC-MAIN-2026-25",
+  "probed": 810,
+  "with_chinese_presence": 10,
+  "presence_rate": 0.0123,
+  "by_stratum": {
+    "Belize": {
+      "probed": 7,
+      "with_chinese": 2
+    },
+    "Seychelles": {
+      "probed": 27,
+      "with_chinese": 1
+    },
+    "no offshore entity": {
+      "probed": 776,
+      "with_chinese": 7
+    }
+  },
+  "domains_with_chinese": [
+    "3h-trading.com",
+    "capital.com",
+    "gold-money.cn",
+    "m4markets.com",
+    "markets.com",
+    "wh-hw.com",
+    "wh-sinobest.com",
+    "wh10176.cn",
+    "wing-fx.com",
+    "world-trader.com"
+  ],
+  "caveats": [
+    "The presence rate is the measured precision of frame F1 at this stage. F1 is recall-oriented by construction (amendment 3) and is not retuned in response to this number.",
+    "Rates are not comparable across strata without care: the small strata are censused and the large one sampled (amendment 4).",
+    "Capture tallies are capped CDX record counts, not unique page counts; only presence (n > 0) is used analytically.",
+    "Service failures are not recorded, so absence in the file means not-yet-probed, never a silent failure."
+  ]
+}
