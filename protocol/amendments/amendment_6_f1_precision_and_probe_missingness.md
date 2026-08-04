@@ -114,3 +114,76 @@ The 60-unit floor therefore needs a route other than enlarging F1. Enlarging F1 
 - `artifacts/frames/f1_presence_probe.jsonl` — 810 rows, append-only, resumable
 - `artifacts/frames/f1_presence_summary.json` — regenerated after the retry pass
 - `artifacts/frames/frame_f1_draw.csv` — 1,000 domains, unchanged
+
+---
+
+# Revision 1 — 2026-08-04, later the same day
+
+**Sequence, stated first.** Everything above was written and committed (`913aba1`) against a probe file of 810 rows. A further retry pass then completed, taking the file to **979 of 1,000**. The revision is recorded here rather than by editing the text above, so that what was claimed at 810 rows and what survives at 979 are both visible. Two of the three conclusions above are **superseded**, and one new finding is more serious than anything in the original.
+
+## R1.1 Superseded: the bounded range
+
+| | at 810 rows | at 979 rows |
+|---|---|---|
+| Probed | 810 | 979 |
+| Chinese-present | 10 | **14** |
+| Rate | 1.23% | **1.43%** |
+| Unprobed | 190 | **21** |
+| Bounded range | 1.0% – 2.6% | **1.40% – 1.57%** |
+
+The original's headline — that 1.23% was a lower bound with real uncertainty attached — was an artifact of an incomplete run. With 21 domains outstanding the bound is tight and the point estimate is usable. **The wide range in §2 above should not be quoted.**
+
+## R1.2 Strengthened: the missingness gradient
+
+The capture-count gradient is now steeper and rests on more data (n = 901 usable of 945 in the sampled stratum):
+
+| Capped captures | n | Chinese-present | Rate |
+|---|---|---|---|
+| 0 | 642 | 0 | 0.00% |
+| 1–9 | 162 | 2 | 1.23% |
+| 10–99 | 72 | 6 | 8.33% |
+| 100–999 | 23 | 3 | **13.04%** |
+| 1000+ | 2 | 0 | 0.00% |
+
+The mechanism argued in §2 (CDX 504s fall on expensive, high-capture queries; capture count predicts Chinese presence) is better supported than before. Its *practical* consequence has evaporated, because only 21 domains remain unprobed. **The methodological point stands; the uncertainty it implied does not.**
+
+## R1.3 New, and worse: the probe measures Chinese presence, not relevance
+
+This was not asked in the original and it should have been. The probe answers "does this domain have Chinese-primary captures?" It does **not** answer "is this a retail FX operator making regulatory claims?" Reading the stored sample URLs domain by domain:
+
+| Domain | Provisional read | Evidence (stored sample URLs only) |
+|---|---|---|
+| capital.com | FX/CFD broker | `/zh-hans/analysis/` — F2-reachable |
+| markets.com | FX/CFD broker | `/zh/`, `/zh-tw/` — F2-reachable |
+| m4markets.com | FX/CFD broker | already in the claim corpus |
+| 3h-trading.com | plausible, unconfirmed | path `/fudengwangpeizi/` contains a transliteration of 配资 (margin financing) |
+| gold-money.cn | plausible, unconfirmed | `/wp/` only; topic not determinable from path |
+| wh10176.cn | plausible, unconfirmed | `/article_cat_12.html`; generic CMS |
+| world-trader.com | plausible, unconfirmed | root only, 2 captures |
+| **wing-fx.com** | **not FX** | `/channel-fx/even-channel-strip`, `/master-channel-strip` — audio channel strips. The `fx` here is audio effects. |
+| **canine-prime.com** | **not FX** | canine |
+| **gold-skin.co.kr** | **not FX** | `cn.` subdomain of a Korean `.co.kr` cosmetics domain |
+| wh-hw.com | likely not FX | `wh-` reads as Wuhan (武汉), not waihui |
+| wh-sinobest.com | likely not FX | "wh-sinobest" reads as Wuhan Sinobest |
+| ks-wh.com.cn | likely not FX | `.com.cn`, `wh-` reads as Wuhan |
+| wh-lz.com | likely not FX | `wh-` reads as Wuhan |
+
+**Correction to a claim made in the original text of this amendment.** §1 above states that `wh-hw.com` and `wh-sinobest.com` "were drawn by the `wh` token in the frozen `SHORT_TOKENS`, i.e. the Pinyin initials of 外汇 — the frozen vocabulary paid out on live data." **That inference was unsupported and is probably backwards.** `wh-` is a common prefix for Wuhan-based companies. The token fired; nothing was shown to have been paid out. The same applies to `fx`, which fires on audio effects.
+
+The consequence, stated as an upper bound because the four "plausible" domains have not had their content checked:
+
+| Measure | Count | Rate |
+|---|---|---|
+| Chinese-presence hits | 14 / 979 | 1.43% |
+| Relevant at best case (broker + all four plausible) | 7 / 979 | 0.72% |
+| **Distinctive — relevant AND not F2-reachable** | **≤ 4 / 979** | **≤ 0.41%** |
+
+The four plausible domains require a content check before any of this is final. That check is the immediate next step and its result goes in a further revision, whatever it is.
+
+## R1.4 What this does to §4
+
+§4 above concluded that F1 is "a reach instrument, not a volume instrument". That was too kind. On the completed run, **F1's distinctive usable yield is at most four domains in a thousand, and the two short tokens `wh` and `fx` are producing systematic false positives** — `wh` on Wuhan, `fx` on audio.
+
+Amendment 3 committed to publishing the yield "whatever it turns out to be". This is what it turned out to be, and the frame is still not retuned: the short tokens stay, because removing them now, after seeing which domains they caught, is exactly the retuning that was prohibited. The finding is reported as a property of the frozen instrument.
+
+The route to the 60-unit floor is not F1, and it is now not a close question.

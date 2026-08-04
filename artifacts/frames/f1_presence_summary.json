@@ -1,8 +1,8 @@
 {
   "crawl": "CC-MAIN-2026-25",
-  "probed": 810,
-  "with_chinese_presence": 10,
-  "presence_rate": 0.0123,
+  "probed": 979,
+  "with_chinese_presence": 14,
+  "presence_rate": 0.0143,
   "by_stratum": {
     "Belize": {
       "probed": 7,
@@ -13,17 +13,21 @@
       "with_chinese": 1
     },
     "no offshore entity": {
-      "probed": 776,
-      "with_chinese": 7
+      "probed": 945,
+      "with_chinese": 11
     }
   },
   "domains_with_chinese": [
     "3h-trading.com",
+    "canine-prime.com",
     "capital.com",
     "gold-money.cn",
+    "gold-skin.co.kr",
+    "ks-wh.com.cn",
     "m4markets.com",
     "markets.com",
     "wh-hw.com",
+    "wh-lz.com",
     "wh-sinobest.com",
     "wh10176.cn",
     "wing-fx.com",
